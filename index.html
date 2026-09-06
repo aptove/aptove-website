@@ -18,8 +18,8 @@
                     <h1>aptove</h1>
                 </div>
                 <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -27,14 +27,169 @@
     </header>
 
     <main>
-        <section id="home" class="hero">
+<section id="how-it-works" class="how-it-works">
             <div class="container">
-                <div class="hero-content">
-                    <div class="status-badge">🚧 Work in Progress</div>
-                    <div id="countdown" class="countdown-container"></div>
-                    <div class="cta-buttons">
-                        <a href="https://github.com/aptove" target="_blank" class="cta-button primary">View on GitHub</a>
-                        <a href="#about" class="cta-button secondary">Learn More</a>
+                <h2>How It Works</h2>
+                <p class="section-subtitle">Aptove mobile apps reach any AI agent running on your computer securely</p>
+                <div class="arch-diagram-wrapper">
+                    <svg viewBox="0 0 840 380" xmlns="http://www.w3.org/2000/svg" class="arch-svg" role="img" aria-label="Architecture diagram: mobile apps connecting to AI agents via Aptove Bridge">
+                        <defs>
+                            <filter id="arch-node-glow" x="-30%" y="-30%" width="160%" height="160%">
+                                <feGaussianBlur stdDeviation="3" result="blur"/>
+                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                            <filter id="arch-dot-glow" x="-80%" y="-80%" width="260%" height="260%">
+                                <feGaussianBlur stdDeviation="2" result="blur"/>
+                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                        </defs>
+
+                        <!-- Column headers -->
+                        <text x="75" y="44" text-anchor="middle" fill="rgba(0,212,255,0.4)" font-size="10" font-family="system-ui,sans-serif" font-weight="600" letter-spacing="1">MOBILE APPS</text>
+                        <text x="410" y="44" text-anchor="middle" fill="rgba(0,212,255,0.4)" font-size="10" font-family="system-ui,sans-serif" font-weight="600" letter-spacing="1">BRIDGE</text>
+                        <text x="742" y="44" text-anchor="middle" fill="rgba(0,212,255,0.4)" font-size="10" font-family="system-ui,sans-serif" font-weight="600" letter-spacing="1">AI AGENTS</text>
+
+                        <!-- iOS Node -->
+                        <g filter="url(#arch-node-glow)">
+                            <rect x="15" y="62" width="120" height="64" rx="12" fill="rgba(0,212,255,0.08)" stroke="#00d4ff" stroke-width="1.5"/>
+                        </g>
+                        <text x="75" y="88" text-anchor="middle" font-size="22" font-family="system-ui,sans-serif">📱</text>
+                        <text x="75" y="108" text-anchor="middle" fill="#00d4ff" font-size="11" font-weight="700" font-family="system-ui,sans-serif">iOS</text>
+                        <text x="75" y="121" text-anchor="middle" fill="#8fa3b8" font-size="9" font-family="system-ui,sans-serif">Aptove App</text>
+
+                        <!-- Android Node -->
+                        <g filter="url(#arch-node-glow)">
+                            <rect x="15" y="246" width="120" height="64" rx="12" fill="rgba(0,212,255,0.08)" stroke="#00d4ff" stroke-width="1.5"/>
+                        </g>
+                        <text x="75" y="272" text-anchor="middle" font-size="22" font-family="system-ui,sans-serif">📱</text>
+                        <text x="75" y="292" text-anchor="middle" fill="#00d4ff" font-size="11" font-weight="700" font-family="system-ui,sans-serif">Android</text>
+                        <text x="75" y="305" text-anchor="middle" fill="#8fa3b8" font-size="9" font-family="system-ui,sans-serif">Aptove App</text>
+
+                        <!-- Bridge Node (glow ring + box) -->
+                        <rect x="326" y="151" width="168" height="90" rx="16" fill="none" stroke="rgba(0,212,255,0.25)" stroke-width="1" class="bridge-glow-ring"/>
+                        <g filter="url(#arch-node-glow)">
+                            <rect x="330" y="155" width="160" height="82" rx="14" fill="rgba(0,212,255,0.12)" stroke="#00d4ff" stroke-width="2.5"/>
+                        </g>
+                        <text x="410" y="185" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700" font-family="system-ui,sans-serif">Bridge</text>
+                        <text x="410" y="203" text-anchor="middle" fill="#8fa3b8" font-size="10" font-family="system-ui,sans-serif">WebSocket Server</text>
+                        <text x="410" y="220" text-anchor="middle" fill="#8fa3b8" font-size="9" font-family="system-ui,sans-serif">Agent Client Protocol</text>
+
+                        <!-- GitHub Copilot Node -->
+                        <g filter="url(#arch-node-glow)">
+                            <rect x="660" y="52" width="165" height="58" rx="12" fill="rgba(0,212,255,0.06)" stroke="rgba(0,212,255,0.3)" stroke-width="1.5"/>
+                        </g>
+                        <text x="742" y="76" text-anchor="middle" fill="#e0e7ef" font-size="12" font-weight="700" font-family="system-ui,sans-serif">GitHub Copilot</text>
+                        <text x="742" y="95" text-anchor="middle" fill="#8fa3b8" font-size="10" font-family="system-ui,sans-serif">CLI Agent</text>
+
+                        <!-- Claude Code Node -->
+                        <g filter="url(#arch-node-glow)">
+                            <rect x="660" y="167" width="165" height="58" rx="12" fill="rgba(0,212,255,0.06)" stroke="rgba(0,212,255,0.3)" stroke-width="1.5"/>
+                        </g>
+                        <text x="742" y="191" text-anchor="middle" fill="#e0e7ef" font-size="12" font-weight="700" font-family="system-ui,sans-serif">Claude Code</text>
+                        <text x="742" y="210" text-anchor="middle" fill="#8fa3b8" font-size="10" font-family="system-ui,sans-serif">AI Agent</text>
+
+                        <!-- Any Agent Node -->
+                        <g filter="url(#arch-node-glow)">
+                            <rect x="660" y="282" width="165" height="58" rx="12" fill="rgba(0,212,255,0.06)" stroke="rgba(0,212,255,0.3)" stroke-width="1.5"/>
+                        </g>
+                        <text x="742" y="306" text-anchor="middle" fill="#e0e7ef" font-size="12" font-weight="700" font-family="system-ui,sans-serif">Any AI Agent</text>
+                        <text x="742" y="325" text-anchor="middle" fill="#8fa3b8" font-size="10" font-family="system-ui,sans-serif">ACP Compatible</text>
+
+                        <!-- Transport paths: phones → bridge -->
+                        <!-- Tailscale: iOS → Bridge -->
+                        <path id="arch-ts-ios" d="M135,82 C232,82 278,168 330,170" fill="none" stroke="#8b5cf6" stroke-width="1.8" stroke-dasharray="7,4" opacity="0.8"/>
+                        <!-- Cloudflare: iOS → Bridge -->
+                        <path id="arch-cf-ios" d="M135,100 C232,100 278,184 330,186" fill="none" stroke="#f97316" stroke-width="1.8" stroke-dasharray="7,4" opacity="0.8"/>
+                        <!-- Cloudflare: Android → Bridge -->
+                        <path id="arch-cf-and" d="M135,263 C232,263 278,204 330,204" fill="none" stroke="#f97316" stroke-width="1.8" stroke-dasharray="7,4" opacity="0.8"/>
+                        <!-- Localhost: Android → Bridge -->
+                        <path id="arch-lo-and" d="M135,279 C232,279 278,218 330,218" fill="none" stroke="#22c55e" stroke-width="1.8" stroke-dasharray="7,4" opacity="0.8"/>
+
+                        <!-- Transport labels -->
+                        <rect x="196" y="57" width="72" height="18" rx="5" fill="rgba(139,92,246,0.15)"/>
+                        <text x="232" y="70" text-anchor="middle" fill="#a78bfa" font-size="10" font-weight="700" font-family="system-ui,sans-serif">Tailscale</text>
+
+                        <rect x="191" y="173" width="82" height="18" rx="5" fill="rgba(249,115,22,0.15)"/>
+                        <text x="232" y="186" text-anchor="middle" fill="#fb923c" font-size="10" font-weight="700" font-family="system-ui,sans-serif">Cloudflare</text>
+
+                        <rect x="196" y="293" width="72" height="18" rx="5" fill="rgba(34,197,94,0.15)"/>
+                        <text x="232" y="306" text-anchor="middle" fill="#4ade80" font-size="10" font-weight="700" font-family="system-ui,sans-serif">Localhost</text>
+
+                        <!-- Bridge → AI client paths -->
+                        <path id="arch-br-cop" d="M490,178 C572,178 610,81 660,81" fill="none" stroke="rgba(0,212,255,0.5)" stroke-width="1.8" stroke-dasharray="6,4"/>
+                        <path id="arch-br-cla" d="M490,196 C572,196 610,196 660,196" fill="none" stroke="rgba(0,212,255,0.5)" stroke-width="1.8" stroke-dasharray="6,4"/>
+                        <path id="arch-br-any" d="M490,214 C572,214 610,311 660,311" fill="none" stroke="rgba(0,212,255,0.5)" stroke-width="1.8" stroke-dasharray="6,4"/>
+
+                        <!-- ACP label -->
+                        <text x="572" y="148" text-anchor="middle" fill="rgba(0,212,255,0.45)" font-size="9" font-weight="600" font-family="system-ui,sans-serif" letter-spacing="0.5">ACP / WebSocket</text>
+
+                        <!-- Animated particles: Tailscale iOS -->
+                        <circle r="4.5" fill="#8b5cf6" filter="url(#arch-dot-glow)">
+                            <animateMotion dur="2.8s" repeatCount="indefinite" begin="0s"><mpath href="#arch-ts-ios"/></animateMotion>
+                        </circle>
+                        <circle r="4.5" fill="#8b5cf6" filter="url(#arch-dot-glow)">
+                            <animateMotion dur="2.8s" repeatCount="indefinite" begin="1.4s"><mpath href="#arch-ts-ios"/></animateMotion>
+                        </circle>
+                        <!-- Animated particles: Cloudflare iOS -->
+                        <circle r="4.5" fill="#f97316" filter="url(#arch-dot-glow)">
+                            <animateMotion dur="2.4s" repeatCount="indefinite" begin="0.3s"><mpath href="#arch-cf-ios"/></animateMotion>
+                        </circle>
+                        <circle r="4.5" fill="#f97316" filter="url(#arch-dot-glow)">
+                            <animateMotion dur="2.4s" repeatCount="indefinite" begin="1.5s"><mpath href="#arch-cf-ios"/></animateMotion>
+                        </circle>
+                        <!-- Animated particles: Cloudflare Android -->
+                        <circle r="4.5" fill="#f97316" filter="url(#arch-dot-glow)">
+                            <animateMotion dur="2.6s" repeatCount="indefinite" begin="0.8s"><mpath href="#arch-cf-and"/></animateMotion>
+                        </circle>
+                        <circle r="4.5" fill="#f97316" filter="url(#arch-dot-glow)">
+                            <animateMotion dur="2.6s" repeatCount="indefinite" begin="2.1s"><mpath href="#arch-cf-and"/></animateMotion>
+                        </circle>
+                        <!-- Animated particles: Localhost Android -->
+                        <circle r="4.5" fill="#22c55e" filter="url(#arch-dot-glow)">
+                            <animateMotion dur="3.2s" repeatCount="indefinite" begin="0.5s"><mpath href="#arch-lo-and"/></animateMotion>
+                        </circle>
+                        <circle r="4.5" fill="#22c55e" filter="url(#arch-dot-glow)">
+                            <animateMotion dur="3.2s" repeatCount="indefinite" begin="2.1s"><mpath href="#arch-lo-and"/></animateMotion>
+                        </circle>
+                        <!-- Animated particles: Bridge → Copilot -->
+                        <circle r="4" fill="#00d4ff" filter="url(#arch-dot-glow)">
+                            <animateMotion dur="2.5s" repeatCount="indefinite" begin="0.2s"><mpath href="#arch-br-cop"/></animateMotion>
+                        </circle>
+                        <circle r="4" fill="#00d4ff" filter="url(#arch-dot-glow)">
+                            <animateMotion dur="2.5s" repeatCount="indefinite" begin="1.45s"><mpath href="#arch-br-cop"/></animateMotion>
+                        </circle>
+                        <!-- Animated particles: Bridge → Claude -->
+                        <circle r="4" fill="#00d4ff" filter="url(#arch-dot-glow)">
+                            <animateMotion dur="2.0s" repeatCount="indefinite" begin="0s"><mpath href="#arch-br-cla"/></animateMotion>
+                        </circle>
+                        <circle r="4" fill="#00d4ff" filter="url(#arch-dot-glow)">
+                            <animateMotion dur="2.0s" repeatCount="indefinite" begin="1.0s"><mpath href="#arch-br-cla"/></animateMotion>
+                        </circle>
+                        <!-- Animated particles: Bridge → Any Agent -->
+                        <circle r="4" fill="#00d4ff" filter="url(#arch-dot-glow)">
+                            <animateMotion dur="3.0s" repeatCount="indefinite" begin="0.8s"><mpath href="#arch-br-any"/></animateMotion>
+                        </circle>
+                        <circle r="4" fill="#00d4ff" filter="url(#arch-dot-glow)">
+                            <animateMotion dur="3.0s" repeatCount="indefinite" begin="2.3s"><mpath href="#arch-br-any"/></animateMotion>
+                        </circle>
+                    </svg>
+                </div>
+                <div class="transport-legend">
+                    <div class="legend-item">
+                        <span class="legend-dot" style="background:#8b5cf6;box-shadow:0 0 8px #8b5cf6"></span>
+                        <span>Tailscale VPN</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot" style="background:#f97316;box-shadow:0 0 8px #f97316"></span>
+                        <span>Cloudflare Tunnel</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot" style="background:#22c55e;box-shadow:0 0 8px #22c55e"></span>
+                        <span>Local Network</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot" style="background:#00d4ff;box-shadow:0 0 8px #00d4ff"></span>
+                        <span>ACP / WebSocket</span>
                     </div>
                 </div>
             </div>
@@ -43,7 +198,7 @@
         <section id="about" class="about">
             <div class="container">
                 <div class="about-content">
-                    <p>Our mission is to make AI agent interactions accessible, seamless, and powerful. With Aptove, you can connect to various AI agents, have natural conversations, and leverage the power of AI.</p>
+                    <p>Use any AI Agent with a single Aptove mobile client</p>
                     <div class="features-grid">
                         <div class="feature-item">
                             <div class="feature-icon">🤖</div>
@@ -53,12 +208,12 @@
                         <div class="feature-item">
                             <div class="feature-icon">🔓</div>
                             <h3>Open Source</h3>
-                            <p>Free and open for everyone to use and contribute</p>
+                            <p>Free and open for everyone to use and contribute. No strings attached</p>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon">💬</div>
-                            <h3>Natural Chat</h3>
-                            <p>Intuitive conversations with AI agents</p>
+                            <h3>Natural Chat with Voice</h3>
+                            <p>Talk to your AI agent with no additional subscription</p>
                         </div>
                     </div>
                 </div>
@@ -81,51 +236,14 @@
 
     <footer>
         <div class="container">
+            <a href="https://github.com/aptove" target="_blank" class="footer-github" aria-label="Aptove on GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+            </a>
             <p>&copy; 2026 Aptove. All rights reserved.</p>
         </div>
     </footer>
 
-    <script>
-        // Countdown timer to end of May 15 2026
-        function updateCountdown() {
-            const targetDate = new Date('2026-05-15T23:59:59');
-            const now = new Date();
-            const difference = targetDate - now;
-            
-            if (difference > 0) {
-                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-                
-                document.getElementById('countdown').innerHTML = 
-                    `<div class="countdown-timer">
-                        <div class="time-unit">
-                            <span class="time-value">${days}</span>
-                            <span class="time-label">Days</span>
-                        </div>
-                        <div class="time-unit">
-                            <span class="time-value">${hours}</span>
-                            <span class="time-label">Hours</span>
-                        </div>
-                        <div class="time-unit">
-                            <span class="time-value">${minutes}</span>
-                            <span class="time-label">Minutes</span>
-                        </div>
-                        <div class="time-unit">
-                            <span class="time-value">${seconds}</span>
-                            <span class="time-label">Seconds</span>
-                        </div>
-                    </div>`;
-            } else {
-                document.getElementById('countdown').innerHTML = `<p class="launch-message">We're live! 🚀</p>`;
-            }
-        }
-        
-        // Update countdown every second
-        setInterval(updateCountdown, 1000);
-        // Initial call
-        updateCountdown();
-    </script>
 </body>
 </html>

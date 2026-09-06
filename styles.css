@@ -346,6 +346,90 @@ footer p {
     opacity: 0.8;
 }
 
+.footer-github {
+    display: inline-block;
+    color: #8fa3b8;
+    margin-bottom: 0.75rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-github:hover {
+    color: #00d4ff;
+    transform: translateY(-2px);
+}
+
+/* Architecture / How It Works */
+.how-it-works {
+    padding: 6rem 0;
+    background: linear-gradient(180deg, #0a1628 0%, #0d1f35 100%);
+    border-top: 1px solid rgba(0, 212, 255, 0.1);
+}
+
+.how-it-works h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 0.75rem;
+    color: #00d4ff;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #8fa3b8;
+    font-size: 1.05rem;
+    max-width: 560px;
+    margin: 0 auto 3rem;
+    line-height: 1.6;
+}
+
+.arch-diagram-wrapper {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 212, 255, 0.1);
+    border-radius: 20px;
+    padding: 2rem 1.5rem;
+    margin-bottom: 2rem;
+    overflow-x: auto;
+}
+
+.arch-svg {
+    width: 100%;
+    max-width: 840px;
+    display: block;
+    margin: 0 auto;
+    min-width: 500px;
+}
+
+.bridge-glow-ring {
+    animation: bridge-glow 3s ease-in-out infinite;
+}
+
+@keyframes bridge-glow {
+    0%, 100% { stroke-width: 1; stroke-opacity: 0.25; }
+    50% { stroke-width: 5; stroke-opacity: 0.75; }
+}
+
+.transport-legend {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: #b8c5d6;
+}
+
+.legend-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .navbar .container {
@@ -384,6 +468,14 @@ footer p {
 
     .time-label {
         font-size: 0.75rem;
+    }
+
+    .arch-diagram-wrapper {
+        padding: 1rem 0.5rem;
+    }
+
+    .transport-legend {
+        gap: 1rem;
     }
 
     .features-grid {

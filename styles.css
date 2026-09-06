@@ -398,6 +398,15 @@ footer p {
     min-width: 500px;
 }
 
+.arch-node-link {
+    cursor: pointer;
+}
+
+.arch-node-link:hover rect {
+    stroke-opacity: 1;
+    filter: brightness(1.3);
+}
+
 .bridge-glow-ring {
     animation: bridge-glow 3s ease-in-out infinite;
 }

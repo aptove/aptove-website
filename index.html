@@ -29,8 +29,6 @@
     <main>
 <section id="how-it-works" class="how-it-works">
             <div class="container">
-                <h2>How It Works</h2>
-                <p class="section-subtitle">Aptove mobile apps reach any AI agent running on your computer securely</p>
                 <div class="arch-diagram-wrapper">
                     <svg viewBox="0 0 840 380" xmlns="http://www.w3.org/2000/svg" class="arch-svg" role="img" aria-label="Architecture diagram: mobile apps connecting to AI agents via Aptove Bridge">
                         <defs>
@@ -81,11 +79,11 @@
                         <text x="742" y="76" text-anchor="middle" fill="#e0e7ef" font-size="12" font-weight="700" font-family="system-ui,sans-serif">GitHub Copilot</text>
                         <text x="742" y="95" text-anchor="middle" fill="#8fa3b8" font-size="10" font-family="system-ui,sans-serif">CLI Agent</text>
 
-                        <!-- Claude Code Node -->
+                        <!-- Codex Node -->
                         <g filter="url(#arch-node-glow)">
                             <rect x="660" y="167" width="165" height="58" rx="12" fill="rgba(0,212,255,0.06)" stroke="rgba(0,212,255,0.3)" stroke-width="1.5"/>
                         </g>
-                        <text x="742" y="191" text-anchor="middle" fill="#e0e7ef" font-size="12" font-weight="700" font-family="system-ui,sans-serif">Claude Code</text>
+                        <text x="742" y="191" text-anchor="middle" fill="#e0e7ef" font-size="12" font-weight="700" font-family="system-ui,sans-serif">Codex</text>
                         <text x="742" y="210" text-anchor="middle" fill="#8fa3b8" font-size="10" font-family="system-ui,sans-serif">AI Agent</text>
 
                         <!-- Any Agent Node -->
@@ -173,24 +171,6 @@
                             <animateMotion dur="3.0s" repeatCount="indefinite" begin="2.3s"><mpath href="#arch-br-any"/></animateMotion>
                         </circle>
                     </svg>
-                </div>
-                <div class="transport-legend">
-                    <div class="legend-item">
-                        <span class="legend-dot" style="background:#8b5cf6;box-shadow:0 0 8px #8b5cf6"></span>
-                        <span>Tailscale VPN</span>
-                    </div>
-                    <div class="legend-item">
-                        <span class="legend-dot" style="background:#f97316;box-shadow:0 0 8px #f97316"></span>
-                        <span>Cloudflare Tunnel</span>
-                    </div>
-                    <div class="legend-item">
-                        <span class="legend-dot" style="background:#22c55e;box-shadow:0 0 8px #22c55e"></span>
-                        <span>Local Network</span>
-                    </div>
-                    <div class="legend-item">
-                        <span class="legend-dot" style="background:#00d4ff;box-shadow:0 0 8px #00d4ff"></span>
-                        <span>ACP / WebSocket</span>
-                    </div>
                 </div>
             </div>
         </section>

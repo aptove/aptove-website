@@ -7,6 +7,9 @@
     <meta name="keywords" content="Aptove, AI agents, Agent Client Protocol, mobile app, open source">
     <meta name="author" content="Aptove">
     <title>Aptove - AI Agent Chat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,165 +18,182 @@
             <div class="container">
                 <div class="logo">
                     <img src="logo.png" alt="Aptove Logo" class="logo-img">
-                    <h1>aptove</h1>
+                    <span class="logo-text">aptove</span>
                 </div>
                 <ul class="nav-links">
                     <li><a href="#about">About</a></li>
                     <li><a href="#how-it-works">How It Works</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
+                <a href="https://github.com/aptove" target="_blank" class="nav-cta">GitHub ↗</a>
             </div>
         </nav>
     </header>
 
     <main>
-<section id="how-it-works" class="how-it-works">
+        <!-- Hero -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <span class="hero-badge">Open Source · Agent Client Protocol</span>
+                    <h1>Your AI agents.<br>In your pocket.</h1>
+                    <p class="hero-description">One mobile app for every ACP-compatible AI agent. Direct connection, no cloud lock-in, no subscriptions.</p>
+                    <div class="cta-buttons">
+                        <a href="https://github.com/aptove" target="_blank" class="cta-button primary">Get Started</a>
+                        <a href="https://github.com/aptove" target="_blank" class="cta-button secondary">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Architecture Diagram -->
+        <section id="how-it-works" class="how-it-works">
             <div class="container">
                 <div class="arch-diagram-wrapper">
                     <svg viewBox="0 0 840 380" xmlns="http://www.w3.org/2000/svg" class="arch-svg" role="img" aria-label="Architecture diagram: mobile apps connecting to AI agents via Aptove Bridge">
                         <defs>
                             <filter id="arch-node-glow" x="-30%" y="-30%" width="160%" height="160%">
-                                <feGaussianBlur stdDeviation="3" result="blur"/>
+                                <feGaussianBlur stdDeviation="2" result="blur"/>
                                 <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
                             </filter>
                             <filter id="arch-dot-glow" x="-80%" y="-80%" width="260%" height="260%">
-                                <feGaussianBlur stdDeviation="2" result="blur"/>
+                                <feGaussianBlur stdDeviation="1.5" result="blur"/>
                                 <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
                             </filter>
                         </defs>
 
                         <!-- Column headers -->
-                        <text x="75" y="44" text-anchor="middle" fill="rgba(0,212,255,0.4)" font-size="10" font-family="system-ui,sans-serif" font-weight="600" letter-spacing="1">MOBILE APPS</text>
-                        <text x="410" y="44" text-anchor="middle" fill="rgba(0,212,255,0.4)" font-size="10" font-family="system-ui,sans-serif" font-weight="600" letter-spacing="1">BRIDGE</text>
-                        <text x="742" y="44" text-anchor="middle" fill="rgba(0,212,255,0.4)" font-size="10" font-family="system-ui,sans-serif" font-weight="600" letter-spacing="1">AI AGENTS</text>
+                        <text x="75" y="44" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="10" font-family="'JetBrains Mono',monospace" font-weight="500" letter-spacing="1.5">MOBILE APPS</text>
+                        <text x="410" y="44" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="10" font-family="'JetBrains Mono',monospace" font-weight="500" letter-spacing="1.5">BRIDGE</text>
+                        <text x="742" y="44" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="10" font-family="'JetBrains Mono',monospace" font-weight="500" letter-spacing="1.5">AI AGENTS</text>
 
                         <!-- iOS Node -->
                         <a href="https://github.com/aptove/ios" target="_blank" class="arch-node-link">
                             <g filter="url(#arch-node-glow)">
-                                <rect x="15" y="62" width="120" height="64" rx="12" fill="rgba(0,212,255,0.08)" stroke="#00d4ff" stroke-width="1.5"/>
+                                <rect x="15" y="62" width="120" height="64" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
                             </g>
                             <text x="75" y="88" text-anchor="middle" font-size="22" font-family="system-ui,sans-serif">📱</text>
-                            <text x="75" y="108" text-anchor="middle" fill="#00d4ff" font-size="11" font-weight="700" font-family="system-ui,sans-serif">iOS</text>
-                            <text x="75" y="121" text-anchor="middle" fill="#8fa3b8" font-size="9" font-family="system-ui,sans-serif">Aptove App</text>
+                            <text x="75" y="108" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="600" font-family="'Inter',sans-serif">iOS</text>
+                            <text x="75" y="121" text-anchor="middle" fill="rgba(255,255,255,0.38)" font-size="9" font-family="'JetBrains Mono',monospace">Aptove App</text>
                         </a>
 
                         <!-- Android Node -->
                         <a href="https://github.com/aptove/android" target="_blank" class="arch-node-link">
                             <g filter="url(#arch-node-glow)">
-                                <rect x="15" y="246" width="120" height="64" rx="12" fill="rgba(0,212,255,0.08)" stroke="#00d4ff" stroke-width="1.5"/>
+                                <rect x="15" y="246" width="120" height="64" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
                             </g>
                             <text x="75" y="272" text-anchor="middle" font-size="22" font-family="system-ui,sans-serif">📱</text>
-                            <text x="75" y="292" text-anchor="middle" fill="#00d4ff" font-size="11" font-weight="700" font-family="system-ui,sans-serif">Android</text>
-                            <text x="75" y="305" text-anchor="middle" fill="#8fa3b8" font-size="9" font-family="system-ui,sans-serif">Aptove App</text>
+                            <text x="75" y="292" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="600" font-family="'Inter',sans-serif">Android</text>
+                            <text x="75" y="305" text-anchor="middle" fill="rgba(255,255,255,0.38)" font-size="9" font-family="'JetBrains Mono',monospace">Aptove App</text>
                         </a>
 
                         <!-- Bridge Node (glow ring + box) -->
                         <a href="https://github.com/aptove/bridge" target="_blank" class="arch-node-link">
-                            <rect x="326" y="151" width="168" height="90" rx="16" fill="none" stroke="rgba(0,212,255,0.25)" stroke-width="1" class="bridge-glow-ring"/>
+                            <rect x="326" y="151" width="168" height="90" rx="14" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1" class="bridge-glow-ring"/>
                             <g filter="url(#arch-node-glow)">
-                                <rect x="330" y="155" width="160" height="82" rx="14" fill="rgba(0,212,255,0.12)" stroke="#00d4ff" stroke-width="2.5"/>
+                                <rect x="330" y="155" width="160" height="82" rx="12" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.7)" stroke-width="2"/>
                             </g>
-                            <text x="410" y="185" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700" font-family="system-ui,sans-serif">Bridge</text>
-                            <text x="410" y="203" text-anchor="middle" fill="#8fa3b8" font-size="10" font-family="system-ui,sans-serif">WebSocket Server</text>
-                            <text x="410" y="220" text-anchor="middle" fill="#8fa3b8" font-size="9" font-family="system-ui,sans-serif">Agent Client Protocol</text>
+                            <text x="410" y="185" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700" font-family="'Inter',sans-serif">Bridge</text>
+                            <text x="410" y="203" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="10" font-family="'JetBrains Mono',monospace">WebSocket Server</text>
+                            <text x="410" y="220" text-anchor="middle" fill="rgba(255,255,255,0.38)" font-size="9" font-family="'JetBrains Mono',monospace">Agent Client Protocol</text>
                         </a>
 
                         <!-- GitHub Copilot Node -->
                         <g filter="url(#arch-node-glow)">
-                            <rect x="660" y="52" width="165" height="58" rx="12" fill="rgba(0,212,255,0.06)" stroke="rgba(0,212,255,0.3)" stroke-width="1.5"/>
+                            <rect x="660" y="52" width="165" height="58" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
                         </g>
-                        <text x="742" y="76" text-anchor="middle" fill="#e0e7ef" font-size="12" font-weight="700" font-family="system-ui,sans-serif">GitHub Copilot</text>
-                        <text x="742" y="95" text-anchor="middle" fill="#8fa3b8" font-size="10" font-family="system-ui,sans-serif">CLI Agent</text>
+                        <text x="742" y="76" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="600" font-family="'Inter',sans-serif">GitHub Copilot</text>
+                        <text x="742" y="95" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="10" font-family="'JetBrains Mono',monospace">CLI Agent</text>
 
                         <!-- Codex Node -->
                         <g filter="url(#arch-node-glow)">
-                            <rect x="660" y="167" width="165" height="58" rx="12" fill="rgba(0,212,255,0.06)" stroke="rgba(0,212,255,0.3)" stroke-width="1.5"/>
+                            <rect x="660" y="167" width="165" height="58" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
                         </g>
-                        <text x="742" y="191" text-anchor="middle" fill="#e0e7ef" font-size="12" font-weight="700" font-family="system-ui,sans-serif">Codex</text>
-                        <text x="742" y="210" text-anchor="middle" fill="#8fa3b8" font-size="10" font-family="system-ui,sans-serif">AI Agent</text>
+                        <text x="742" y="191" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="600" font-family="'Inter',sans-serif">Codex</text>
+                        <text x="742" y="210" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="10" font-family="'JetBrains Mono',monospace">AI Agent</text>
 
                         <!-- Any Agent Node -->
                         <g filter="url(#arch-node-glow)">
-                            <rect x="660" y="282" width="165" height="58" rx="12" fill="rgba(0,212,255,0.06)" stroke="rgba(0,212,255,0.3)" stroke-width="1.5"/>
+                            <rect x="660" y="282" width="165" height="58" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
                         </g>
-                        <text x="742" y="306" text-anchor="middle" fill="#e0e7ef" font-size="12" font-weight="700" font-family="system-ui,sans-serif">Any AI Agent</text>
-                        <text x="742" y="325" text-anchor="middle" fill="#8fa3b8" font-size="10" font-family="system-ui,sans-serif">ACP Compatible</text>
+                        <text x="742" y="306" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="600" font-family="'Inter',sans-serif">Any AI Agent</text>
+                        <text x="742" y="325" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="10" font-family="'JetBrains Mono',monospace">ACP Compatible</text>
 
                         <!-- Transport paths: phones → bridge -->
                         <!-- Tailscale: iOS → Bridge -->
-                        <path id="arch-ts-ios" d="M135,82 C232,82 278,168 330,170" fill="none" stroke="#8b5cf6" stroke-width="1.8" stroke-dasharray="7,4" opacity="0.8"/>
+                        <path id="arch-ts-ios" d="M135,82 C232,82 278,168 330,170" fill="none" stroke="#a78bfa" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.7"/>
                         <!-- Cloudflare: iOS → Bridge -->
-                        <path id="arch-cf-ios" d="M135,100 C232,100 278,184 330,186" fill="none" stroke="#f97316" stroke-width="1.8" stroke-dasharray="7,4" opacity="0.8"/>
+                        <path id="arch-cf-ios" d="M135,100 C232,100 278,184 330,186" fill="none" stroke="#fb923c" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.7"/>
                         <!-- Cloudflare: Android → Bridge -->
-                        <path id="arch-cf-and" d="M135,263 C232,263 278,204 330,204" fill="none" stroke="#f97316" stroke-width="1.8" stroke-dasharray="7,4" opacity="0.8"/>
+                        <path id="arch-cf-and" d="M135,263 C232,263 278,204 330,204" fill="none" stroke="#fb923c" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.7"/>
                         <!-- Localhost: Android → Bridge -->
-                        <path id="arch-lo-and" d="M135,279 C232,279 278,218 330,218" fill="none" stroke="#22c55e" stroke-width="1.8" stroke-dasharray="7,4" opacity="0.8"/>
+                        <path id="arch-lo-and" d="M135,279 C232,279 278,218 330,218" fill="none" stroke="#4ade80" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.7"/>
 
                         <!-- Transport labels -->
-                        <rect x="196" y="57" width="72" height="18" rx="5" fill="rgba(139,92,246,0.15)"/>
-                        <text x="232" y="70" text-anchor="middle" fill="#a78bfa" font-size="10" font-weight="700" font-family="system-ui,sans-serif">Tailscale</text>
+                        <rect x="196" y="57" width="72" height="18" rx="4" fill="rgba(167,139,250,0.12)"/>
+                        <text x="232" y="70" text-anchor="middle" fill="#a78bfa" font-size="10" font-weight="600" font-family="'JetBrains Mono',monospace">Tailscale</text>
 
-                        <rect x="191" y="173" width="82" height="18" rx="5" fill="rgba(249,115,22,0.15)"/>
-                        <text x="232" y="186" text-anchor="middle" fill="#fb923c" font-size="10" font-weight="700" font-family="system-ui,sans-serif">Cloudflare</text>
+                        <rect x="191" y="173" width="82" height="18" rx="4" fill="rgba(251,146,60,0.12)"/>
+                        <text x="232" y="186" text-anchor="middle" fill="#fb923c" font-size="10" font-weight="600" font-family="'JetBrains Mono',monospace">Cloudflare</text>
 
-                        <rect x="196" y="293" width="72" height="18" rx="5" fill="rgba(34,197,94,0.15)"/>
-                        <text x="232" y="306" text-anchor="middle" fill="#4ade80" font-size="10" font-weight="700" font-family="system-ui,sans-serif">Localhost</text>
+                        <rect x="196" y="293" width="72" height="18" rx="4" fill="rgba(74,222,128,0.12)"/>
+                        <text x="232" y="306" text-anchor="middle" fill="#4ade80" font-size="10" font-weight="600" font-family="'JetBrains Mono',monospace">Localhost</text>
 
                         <!-- Bridge → AI client paths -->
-                        <path id="arch-br-cop" d="M490,178 C572,178 610,81 660,81" fill="none" stroke="rgba(0,212,255,0.5)" stroke-width="1.8" stroke-dasharray="6,4"/>
-                        <path id="arch-br-cla" d="M490,196 C572,196 610,196 660,196" fill="none" stroke="rgba(0,212,255,0.5)" stroke-width="1.8" stroke-dasharray="6,4"/>
-                        <path id="arch-br-any" d="M490,214 C572,214 610,311 660,311" fill="none" stroke="rgba(0,212,255,0.5)" stroke-width="1.8" stroke-dasharray="6,4"/>
+                        <path id="arch-br-cop" d="M490,178 C572,178 610,81 660,81" fill="none" stroke="rgba(255,255,255,0.28)" stroke-width="1.5" stroke-dasharray="6,4"/>
+                        <path id="arch-br-cla" d="M490,196 C572,196 610,196 660,196" fill="none" stroke="rgba(255,255,255,0.28)" stroke-width="1.5" stroke-dasharray="6,4"/>
+                        <path id="arch-br-any" d="M490,214 C572,214 610,311 660,311" fill="none" stroke="rgba(255,255,255,0.28)" stroke-width="1.5" stroke-dasharray="6,4"/>
 
                         <!-- ACP label -->
-                        <text x="572" y="148" text-anchor="middle" fill="rgba(0,212,255,0.45)" font-size="9" font-weight="600" font-family="system-ui,sans-serif" letter-spacing="0.5">ACP / WebSocket</text>
+                        <text x="572" y="148" text-anchor="middle" fill="rgba(255,255,255,0.28)" font-size="9" font-weight="500" font-family="'JetBrains Mono',monospace" letter-spacing="0.5">ACP / WebSocket</text>
 
                         <!-- Animated particles: Tailscale iOS -->
-                        <circle r="4.5" fill="#8b5cf6" filter="url(#arch-dot-glow)">
+                        <circle r="4" fill="#a78bfa" filter="url(#arch-dot-glow)">
                             <animateMotion dur="2.8s" repeatCount="indefinite" begin="0s"><mpath href="#arch-ts-ios"/></animateMotion>
                         </circle>
-                        <circle r="4.5" fill="#8b5cf6" filter="url(#arch-dot-glow)">
+                        <circle r="4" fill="#a78bfa" filter="url(#arch-dot-glow)">
                             <animateMotion dur="2.8s" repeatCount="indefinite" begin="1.4s"><mpath href="#arch-ts-ios"/></animateMotion>
                         </circle>
                         <!-- Animated particles: Cloudflare iOS -->
-                        <circle r="4.5" fill="#f97316" filter="url(#arch-dot-glow)">
+                        <circle r="4" fill="#fb923c" filter="url(#arch-dot-glow)">
                             <animateMotion dur="2.4s" repeatCount="indefinite" begin="0.3s"><mpath href="#arch-cf-ios"/></animateMotion>
                         </circle>
-                        <circle r="4.5" fill="#f97316" filter="url(#arch-dot-glow)">
+                        <circle r="4" fill="#fb923c" filter="url(#arch-dot-glow)">
                             <animateMotion dur="2.4s" repeatCount="indefinite" begin="1.5s"><mpath href="#arch-cf-ios"/></animateMotion>
                         </circle>
                         <!-- Animated particles: Cloudflare Android -->
-                        <circle r="4.5" fill="#f97316" filter="url(#arch-dot-glow)">
+                        <circle r="4" fill="#fb923c" filter="url(#arch-dot-glow)">
                             <animateMotion dur="2.6s" repeatCount="indefinite" begin="0.8s"><mpath href="#arch-cf-and"/></animateMotion>
                         </circle>
-                        <circle r="4.5" fill="#f97316" filter="url(#arch-dot-glow)">
+                        <circle r="4" fill="#fb923c" filter="url(#arch-dot-glow)">
                             <animateMotion dur="2.6s" repeatCount="indefinite" begin="2.1s"><mpath href="#arch-cf-and"/></animateMotion>
                         </circle>
                         <!-- Animated particles: Localhost Android -->
-                        <circle r="4.5" fill="#22c55e" filter="url(#arch-dot-glow)">
+                        <circle r="4" fill="#4ade80" filter="url(#arch-dot-glow)">
                             <animateMotion dur="3.2s" repeatCount="indefinite" begin="0.5s"><mpath href="#arch-lo-and"/></animateMotion>
                         </circle>
-                        <circle r="4.5" fill="#22c55e" filter="url(#arch-dot-glow)">
+                        <circle r="4" fill="#4ade80" filter="url(#arch-dot-glow)">
                             <animateMotion dur="3.2s" repeatCount="indefinite" begin="2.1s"><mpath href="#arch-lo-and"/></animateMotion>
                         </circle>
                         <!-- Animated particles: Bridge → Copilot -->
-                        <circle r="4" fill="#00d4ff" filter="url(#arch-dot-glow)">
+                        <circle r="3.5" fill="rgba(255,255,255,0.85)" filter="url(#arch-dot-glow)">
                             <animateMotion dur="2.5s" repeatCount="indefinite" begin="0.2s"><mpath href="#arch-br-cop"/></animateMotion>
                         </circle>
-                        <circle r="4" fill="#00d4ff" filter="url(#arch-dot-glow)">
+                        <circle r="3.5" fill="rgba(255,255,255,0.85)" filter="url(#arch-dot-glow)">
                             <animateMotion dur="2.5s" repeatCount="indefinite" begin="1.45s"><mpath href="#arch-br-cop"/></animateMotion>
                         </circle>
                         <!-- Animated particles: Bridge → Claude -->
-                        <circle r="4" fill="#00d4ff" filter="url(#arch-dot-glow)">
+                        <circle r="3.5" fill="rgba(255,255,255,0.85)" filter="url(#arch-dot-glow)">
                             <animateMotion dur="2.0s" repeatCount="indefinite" begin="0s"><mpath href="#arch-br-cla"/></animateMotion>
                         </circle>
-                        <circle r="4" fill="#00d4ff" filter="url(#arch-dot-glow)">
+                        <circle r="3.5" fill="rgba(255,255,255,0.85)" filter="url(#arch-dot-glow)">
                             <animateMotion dur="2.0s" repeatCount="indefinite" begin="1.0s"><mpath href="#arch-br-cla"/></animateMotion>
                         </circle>
                         <!-- Animated particles: Bridge → Any Agent -->
-                        <circle r="4" fill="#00d4ff" filter="url(#arch-dot-glow)">
+                        <circle r="3.5" fill="rgba(255,255,255,0.85)" filter="url(#arch-dot-glow)">
                             <animateMotion dur="3.0s" repeatCount="indefinite" begin="0.8s"><mpath href="#arch-br-any"/></animateMotion>
                         </circle>
-                        <circle r="4" fill="#00d4ff" filter="url(#arch-dot-glow)">
+                        <circle r="3.5" fill="rgba(255,255,255,0.85)" filter="url(#arch-dot-glow)">
                             <animateMotion dur="3.0s" repeatCount="indefinite" begin="2.3s"><mpath href="#arch-br-any"/></animateMotion>
                         </circle>
                     </svg>
@@ -181,31 +201,77 @@
             </div>
         </section>
 
+        <!-- Demo Panels -->
         <section id="about" class="about">
             <div class="container">
-                <div class="about-content">
-                    <p>Use any AI Agent with a single Aptove mobile client</p>
-                    <div class="features-grid">
-                        <div class="feature-item">
-                            <div class="feature-icon">🤖</div>
-                            <h3>Agent Client Protocol</h3>
-                            <p>Built on open standards for AI agent communication</p>
+                <h2 class="section-heading">Your agents. Your connection.</h2>
+                <p class="section-sub">No cloud middleware. No subscriptions. Just your device talking to your AI agent.</p>
+
+                <div class="demo-panels">
+                    <!-- Transport Panel -->
+                    <div class="demo-panel">
+                        <div class="demo-panel-header">
+                            <span class="mono-label">transport.toml</span>
                         </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">🔓</div>
-                            <h3>Open Source</h3>
-                            <p>Free and open for everyone to use and contribute. No strings attached</p>
+                        <div class="demo-panel-body">
+                            <div class="demo-list-item">
+                                <span class="demo-dot" style="background:#a78bfa"></span>
+                                <span>Tailscale</span>
+                            </div>
+                            <div class="demo-list-item">
+                                <span class="demo-dot" style="background:#fb923c"></span>
+                                <span>Cloudflare</span>
+                            </div>
+                            <div class="demo-list-item">
+                                <span class="demo-dot" style="background:#4ade80"></span>
+                                <span>Localhost</span>
+                            </div>
                         </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">💬</div>
-                            <h3>Natural Chat with Voice</h3>
-                            <p>Talk to your AI agent with no additional subscription</p>
+                        <p class="demo-panel-desc">Connect from anywhere — local network, VPN, or global tunnel.</p>
+                    </div>
+
+                    <!-- Bridge Panel (featured) -->
+                    <div class="demo-panel demo-panel-featured">
+                        <div class="demo-panel-header">
+                            <span class="mono-label">bridge</span>
                         </div>
+                        <div class="demo-panel-body">
+                            <h3>Direct. Private. Open.</h3>
+                            <p>The bridge runs on your machine. Your conversations never touch third-party servers.</p>
+                            <div class="demo-tags">
+                                <span class="demo-tag">WebSocket</span>
+                                <span class="demo-tag">ACP</span>
+                                <span class="demo-tag">Open Source</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Agents Panel -->
+                    <div class="demo-panel">
+                        <div class="demo-panel-header">
+                            <span class="mono-label">agents/</span>
+                        </div>
+                        <div class="demo-panel-body">
+                            <div class="demo-list-item">
+                                <span class="demo-dot" style="background:rgba(255,255,255,0.45)"></span>
+                                <span>GitHub Copilot</span>
+                            </div>
+                            <div class="demo-list-item">
+                                <span class="demo-dot" style="background:rgba(255,255,255,0.45)"></span>
+                                <span>Claude Code</span>
+                            </div>
+                            <div class="demo-list-item">
+                                <span class="demo-dot" style="background:rgba(255,255,255,0.45)"></span>
+                                <span>Any ACP Agent</span>
+                            </div>
+                        </div>
+                        <p class="demo-panel-desc">Works with any ACP-compatible agent. One client, any backend.</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Contact -->
         <section id="contact" class="contact">
             <div class="container">
                 <h2>Join the Community</h2>
@@ -230,6 +296,5 @@
             <p>&copy; 2026 Aptove. All rights reserved.</p>
         </div>
     </footer>
-
 </body>
 </html>

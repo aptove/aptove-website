@@ -88,6 +88,12 @@ body {
     color: var(--text);
 }
 
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
 .nav-cta {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.8rem;
@@ -103,6 +109,23 @@ body {
 .nav-cta:hover {
     background-color: rgba(255, 255, 255, 0.06);
     border-color: rgba(255, 255, 255, 0.3);
+}
+
+.nav-login {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--bg);
+    background-color: var(--text);
+    text-decoration: none;
+    padding: 0.4rem 0.9rem;
+    border: 1px solid var(--text);
+    border-radius: 6px;
+    transition: opacity 0.2s ease;
+}
+
+.nav-login:hover {
+    opacity: 0.85;
 }
 
 /* ── Hero ────────────────────────────────────────────────── */
@@ -452,7 +475,7 @@ footer p {
         justify-content: center;
     }
 
-    .nav-cta {
+    .nav-actions {
         display: none;
     }
 

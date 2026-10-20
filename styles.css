@@ -256,6 +256,78 @@ body {
     50%       { stroke-width: 4; opacity: 0.38; }
 }
 
+/* ── Push Notifications Section ──────────────────────────── */
+.push-section {
+    padding: 5rem 0;
+    border-top: 1px solid var(--border);
+}
+
+.push-options {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+    margin-top: 2.5rem;
+    background: var(--bg-1);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.push-option {
+    flex: 1;
+    padding: 2rem;
+}
+
+.push-option p {
+    color: var(--text-2);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.push-option p a {
+    color: #fb923c;
+    text-decoration: none;
+}
+
+.push-option p a:hover {
+    text-decoration: underline;
+}
+
+.push-option p code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.82em;
+    background: rgba(255,255,255,0.08);
+    padding: 1px 5px;
+    border-radius: 4px;
+}
+
+.push-option-label {
+    font-size: 0.75rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #fb923c;
+    margin-bottom: 0.75rem;
+}
+
+.push-option-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    flex-shrink: 0;
+    color: var(--text-3, rgba(255,255,255,0.25));
+    font-size: 0.75rem;
+    font-family: 'JetBrains Mono', monospace;
+    border-left: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    background: rgba(255,255,255,0.02);
+    writing-mode: vertical-rl;
+    letter-spacing: 0.2em;
+}
+
 /* ── Demo Panels ─────────────────────────────────────────── */
 .about {
     padding: 6rem 0;

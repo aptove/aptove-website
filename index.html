@@ -98,7 +98,7 @@
                                 <rect x="330" y="155" width="160" height="82" rx="12" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.7)" stroke-width="2"/>
                             </g>
                             <text x="410" y="185" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700" font-family="'Inter',sans-serif">Bridge</text>
-                            <text x="410" y="203" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="10" font-family="'JetBrains Mono',monospace">WebSocket Server</text>
+                            <text x="410" y="203" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="10" font-family="'JetBrains Mono',monospace">transport ↔ stdio</text>
                             <text x="410" y="220" text-anchor="middle" fill="rgba(255,255,255,0.38)" font-size="9" font-family="'JetBrains Mono',monospace">Agent Client Protocol</text>
                         </a>
 
@@ -126,22 +126,19 @@
                         <!-- Transport paths: phones → bridge -->
                         <!-- Tailscale: iOS → Bridge -->
                         <path id="arch-ts-ios" d="M135,82 C232,82 278,168 330,170" fill="none" stroke="#a78bfa" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.7"/>
-                        <!-- Cloudflare: iOS → Bridge -->
-                        <path id="arch-cf-ios" d="M135,100 C232,100 278,184 330,186" fill="none" stroke="#fb923c" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.7"/>
-                        <!-- Cloudflare: Android → Bridge -->
-                        <path id="arch-cf-and" d="M135,263 C232,263 278,204 330,204" fill="none" stroke="#fb923c" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.7"/>
-                        <!-- Localhost: Android → Bridge -->
+                        <!-- Local: iOS → Bridge -->
+                        <path id="arch-lo-ios" d="M135,100 C232,100 278,184 330,186" fill="none" stroke="#4ade80" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.7"/>
+                        <!-- Tailscale: Android → Bridge -->
+                        <path id="arch-ts-and" d="M135,263 C232,263 278,204 330,204" fill="none" stroke="#a78bfa" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.7"/>
+                        <!-- Local: Android → Bridge -->
                         <path id="arch-lo-and" d="M135,279 C232,279 278,218 330,218" fill="none" stroke="#4ade80" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.7"/>
 
                         <!-- Transport labels -->
                         <rect x="196" y="57" width="72" height="18" rx="4" fill="rgba(167,139,250,0.12)"/>
                         <text x="232" y="70" text-anchor="middle" fill="#a78bfa" font-size="10" font-weight="600" font-family="'JetBrains Mono',monospace">Tailscale</text>
 
-                        <rect x="191" y="173" width="82" height="18" rx="4" fill="rgba(251,146,60,0.12)"/>
-                        <text x="232" y="186" text-anchor="middle" fill="#fb923c" font-size="10" font-weight="600" font-family="'JetBrains Mono',monospace">Cloudflare</text>
-
-                        <rect x="196" y="293" width="72" height="18" rx="4" fill="rgba(74,222,128,0.12)"/>
-                        <text x="232" y="306" text-anchor="middle" fill="#4ade80" font-size="10" font-weight="600" font-family="'JetBrains Mono',monospace">Localhost</text>
+                        <rect x="200" y="293" width="60" height="18" rx="4" fill="rgba(74,222,128,0.12)"/>
+                        <text x="230" y="306" text-anchor="middle" fill="#4ade80" font-size="10" font-weight="600" font-family="'JetBrains Mono',monospace">Local</text>
 
                         <!-- Bridge → AI client paths -->
                         <path id="arch-br-cop" d="M490,178 C572,178 610,81 660,81" fill="none" stroke="rgba(255,255,255,0.28)" stroke-width="1.5" stroke-dasharray="6,4"/>
@@ -149,7 +146,7 @@
                         <path id="arch-br-any" d="M490,214 C572,214 610,311 660,311" fill="none" stroke="rgba(255,255,255,0.28)" stroke-width="1.5" stroke-dasharray="6,4"/>
 
                         <!-- ACP label -->
-                        <text x="572" y="148" text-anchor="middle" fill="rgba(255,255,255,0.28)" font-size="9" font-weight="500" font-family="'JetBrains Mono',monospace" letter-spacing="0.5">ACP / WebSocket</text>
+                        <text x="572" y="148" text-anchor="middle" fill="rgba(255,255,255,0.28)" font-size="9" font-weight="500" font-family="'JetBrains Mono',monospace" letter-spacing="0.5">ACP / stdio</text>
 
                         <!-- Animated particles: Tailscale iOS -->
                         <circle r="4" fill="#a78bfa" filter="url(#arch-dot-glow)">
@@ -158,21 +155,21 @@
                         <circle r="4" fill="#a78bfa" filter="url(#arch-dot-glow)">
                             <animateMotion dur="2.8s" repeatCount="indefinite" begin="1.4s"><mpath href="#arch-ts-ios"/></animateMotion>
                         </circle>
-                        <!-- Animated particles: Cloudflare iOS -->
-                        <circle r="4" fill="#fb923c" filter="url(#arch-dot-glow)">
-                            <animateMotion dur="2.4s" repeatCount="indefinite" begin="0.3s"><mpath href="#arch-cf-ios"/></animateMotion>
+                        <!-- Animated particles: Local iOS -->
+                        <circle r="4" fill="#4ade80" filter="url(#arch-dot-glow)">
+                            <animateMotion dur="2.4s" repeatCount="indefinite" begin="0.3s"><mpath href="#arch-lo-ios"/></animateMotion>
                         </circle>
-                        <circle r="4" fill="#fb923c" filter="url(#arch-dot-glow)">
-                            <animateMotion dur="2.4s" repeatCount="indefinite" begin="1.5s"><mpath href="#arch-cf-ios"/></animateMotion>
+                        <circle r="4" fill="#4ade80" filter="url(#arch-dot-glow)">
+                            <animateMotion dur="2.4s" repeatCount="indefinite" begin="1.5s"><mpath href="#arch-lo-ios"/></animateMotion>
                         </circle>
-                        <!-- Animated particles: Cloudflare Android -->
-                        <circle r="4" fill="#fb923c" filter="url(#arch-dot-glow)">
-                            <animateMotion dur="2.6s" repeatCount="indefinite" begin="0.8s"><mpath href="#arch-cf-and"/></animateMotion>
+                        <!-- Animated particles: Tailscale Android -->
+                        <circle r="4" fill="#a78bfa" filter="url(#arch-dot-glow)">
+                            <animateMotion dur="2.6s" repeatCount="indefinite" begin="0.8s"><mpath href="#arch-ts-and"/></animateMotion>
                         </circle>
-                        <circle r="4" fill="#fb923c" filter="url(#arch-dot-glow)">
-                            <animateMotion dur="2.6s" repeatCount="indefinite" begin="2.1s"><mpath href="#arch-cf-and"/></animateMotion>
+                        <circle r="4" fill="#a78bfa" filter="url(#arch-dot-glow)">
+                            <animateMotion dur="2.6s" repeatCount="indefinite" begin="2.1s"><mpath href="#arch-ts-and"/></animateMotion>
                         </circle>
-                        <!-- Animated particles: Localhost Android -->
+                        <!-- Animated particles: Local Android -->
                         <circle r="4" fill="#4ade80" filter="url(#arch-dot-glow)">
                             <animateMotion dur="3.2s" repeatCount="indefinite" begin="0.5s"><mpath href="#arch-lo-and"/></animateMotion>
                         </circle>
@@ -205,6 +202,100 @@
             </div>
         </section>
 
+        <!-- Push Notifications -->
+        <section class="push-section">
+            <div class="container">
+                <h2 class="section-heading">Push Notifications</h2>
+                <p class="section-sub">Get notified when your agent responds — even when the app is backgrounded.</p>
+                <div class="arch-diagram-wrapper">
+                    <svg viewBox="0 0 840 160" xmlns="http://www.w3.org/2000/svg" class="arch-svg" role="img" aria-label="Push notification flow: bridge detects agent activity, calls push relay, which delivers to mobile via APNs or FCM">
+                        <defs>
+                            <filter id="push-node-glow" x="-30%" y="-30%" width="160%" height="160%">
+                                <feGaussianBlur stdDeviation="2" result="blur"/>
+                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                            <filter id="push-dot-glow" x="-80%" y="-80%" width="260%" height="260%">
+                                <feGaussianBlur stdDeviation="1.5" result="blur"/>
+                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                        </defs>
+
+                        <!-- AI Agent Node -->
+                        <g filter="url(#push-node-glow)">
+                            <rect x="20" y="50" width="155" height="62" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+                        </g>
+                        <text x="97" y="76" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="600" font-family="'Inter',sans-serif">AI Agent</text>
+                        <text x="97" y="93" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="9" font-family="'JetBrains Mono',monospace">produces output</text>
+                        <text x="97" y="104" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="9" font-family="'JetBrains Mono',monospace">ACP / stdio</text>
+
+                        <!-- Bridge Node -->
+                        <a href="https://github.com/aptove/bridge" target="_blank" class="arch-node-link">
+                            <rect x="225" y="44" width="168" height="72" rx="14" fill="none" stroke="rgba(255,255,255,0.10)" stroke-width="1" class="bridge-glow-ring"/>
+                            <g filter="url(#push-node-glow)">
+                                <rect x="229" y="48" width="160" height="64" rx="12" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.7)" stroke-width="2"/>
+                            </g>
+                            <text x="309" y="76" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="700" font-family="'Inter',sans-serif">Bridge</text>
+                            <text x="309" y="93" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="9" font-family="'JetBrains Mono',monospace">detects activity</text>
+                            <text x="309" y="104" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="9" font-family="'JetBrains Mono',monospace">calls push relay</text>
+                        </a>
+
+                        <!-- Push Relay Node -->
+                        <a href="https://github.com/aptove/cf-push-relay" target="_blank" class="arch-node-link">
+                            <g filter="url(#push-node-glow)">
+                                <rect x="455" y="50" width="185" height="62" rx="10" fill="rgba(251,146,60,0.06)" stroke="rgba(251,146,60,0.55)" stroke-width="1.5"/>
+                            </g>
+                            <text x="547" y="76" text-anchor="middle" fill="#fb923c" font-size="12" font-weight="700" font-family="'Inter',sans-serif">Push Relay</text>
+                            <text x="547" y="93" text-anchor="middle" fill="rgba(251,146,60,0.65)" font-size="9" font-family="'JetBrains Mono',monospace">cf-push-relay ↗</text>
+                            <text x="547" y="104" text-anchor="middle" fill="rgba(251,146,60,0.65)" font-size="9" font-family="'JetBrains Mono',monospace">Cloudflare Worker</text>
+                        </a>
+
+                        <!-- Mobile Apps Node -->
+                        <g filter="url(#push-node-glow)">
+                            <rect x="700" y="50" width="120" height="62" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+                        </g>
+                        <text x="760" y="72" text-anchor="middle" font-size="18" font-family="system-ui,sans-serif">📱</text>
+                        <text x="760" y="91" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="600" font-family="'Inter',sans-serif">Mobile Apps</text>
+                        <text x="760" y="104" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="9" font-family="'JetBrains Mono',monospace">APNs · FCM</text>
+
+                        <!-- Paths -->
+                        <path id="push-p1" d="M175,81 L229,81" fill="none" stroke="rgba(255,255,255,0.28)" stroke-width="1.5" stroke-dasharray="5,4"/>
+                        <path id="push-p2" d="M389,81 L455,81" fill="none" stroke="#fb923c" stroke-width="1.5" stroke-dasharray="5,4" opacity="0.75"/>
+                        <path id="push-p3" d="M640,81 L700,81" fill="none" stroke="rgba(96,165,250,0.75)" stroke-width="1.5" stroke-dasharray="5,4"/>
+
+                        <!-- Path labels -->
+                        <text x="202" y="69" text-anchor="middle" fill="rgba(255,255,255,0.28)" font-size="8" font-family="'JetBrains Mono',monospace">stdio</text>
+                        <text x="422" y="69" text-anchor="middle" fill="rgba(251,146,60,0.85)" font-size="8" font-family="'JetBrains Mono',monospace">HTTPS · JWT</text>
+                        <text x="670" y="69" text-anchor="middle" fill="rgba(96,165,250,0.85)" font-size="8" font-family="'JetBrains Mono',monospace">APNs / FCM</text>
+
+                        <!-- Animated particles: agent → bridge -->
+                        <circle r="3.5" fill="rgba(255,255,255,0.85)" filter="url(#push-dot-glow)">
+                            <animateMotion dur="1.6s" repeatCount="indefinite" begin="0s"><mpath href="#push-p1"/></animateMotion>
+                        </circle>
+                        <!-- Animated particles: bridge → push relay -->
+                        <circle r="3.5" fill="#fb923c" filter="url(#push-dot-glow)">
+                            <animateMotion dur="1.6s" repeatCount="indefinite" begin="0.6s"><mpath href="#push-p2"/></animateMotion>
+                        </circle>
+                        <!-- Animated particles: push relay → mobile -->
+                        <circle r="3.5" fill="#60a5fa" filter="url(#push-dot-glow)">
+                            <animateMotion dur="1.6s" repeatCount="indefinite" begin="1.2s"><mpath href="#push-p3"/></animateMotion>
+                        </circle>
+                    </svg>
+                </div>
+
+                <div class="push-options">
+                    <div class="push-option">
+                        <div class="push-option-label">Hosted by Aptove</div>
+                        <p>Sign in at <a href="https://dash.aptove.com" target="_blank">dash.aptove.com</a> with your Auth0 account, generate client credentials, and add the <code>[push_relay]</code> section to your bridge config. No infrastructure to manage.</p>
+                    </div>
+                    <div class="push-option-divider">or</div>
+                    <div class="push-option">
+                        <div class="push-option-label">Self-hosted</div>
+                        <p>Fork <a href="https://github.com/aptove/cf-push-relay" target="_blank">cf-push-relay ↗</a> and deploy your own Cloudflare Worker with your own APNs and FCM credentials. Pair it with a custom-branded mobile app built from the open-source iOS / Android repos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Demo Panels -->
         <section id="about" class="about">
             <div class="container">
@@ -223,15 +314,11 @@
                                 <span>Tailscale</span>
                             </div>
                             <div class="demo-list-item">
-                                <span class="demo-dot" style="background:#fb923c"></span>
-                                <span>Cloudflare</span>
-                            </div>
-                            <div class="demo-list-item">
                                 <span class="demo-dot" style="background:#4ade80"></span>
-                                <span>Localhost</span>
+                                <span>Local</span>
                             </div>
                         </div>
-                        <p class="demo-panel-desc">Connect from anywhere — local network, VPN, or global tunnel.</p>
+                        <p class="demo-panel-desc">Connect over your local network or through your tailnet.</p>
                     </div>
 
                     <!-- Bridge Panel (featured) -->

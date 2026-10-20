@@ -171,6 +171,48 @@ body {
     margin-bottom: 1.5rem;
 }
 
+/* ── Hero Rotator ─────────────────────────────────────────── */
+.hero-rotator {
+    display: inline-block;
+    vertical-align: baseline;
+    white-space: nowrap;
+}
+
+@keyframes heroRotatorOut {
+    to { opacity: 0; transform: translateY(-0.15em); }
+}
+
+@keyframes heroRotatorIn {
+    from { opacity: 0; transform: translateY(0.15em); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-rotator--out {
+    animation: heroRotatorOut 0.3s ease forwards;
+}
+
+.hero-rotator--in {
+    animation: heroRotatorIn 0.36s ease forwards;
+}
+
+.hero-rotator-logo {
+    display: inline-block;
+    width: 0.72em;
+    height: 0.72em;
+    vertical-align: -0.08em;
+    margin-right: 0.1em;
+}
+
+.hero-rotator-logo svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.hero-rotator-name {
+    display: inline;
+}
+
 .hero-description {
     font-size: 1.05rem;
     color: var(--text-2);

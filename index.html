@@ -40,7 +40,7 @@
             <div class="container">
                 <div class="hero-content">
                     <span class="hero-badge">Open Source · Agent Client Protocol</span>
-                    <h1>Your AI agents.<br>In your pocket.</h1>
+                    <h1>Your <span class="hero-rotator" id="heroRotator"><span class="hero-rotator-logo" id="heroRotatorLogo"></span><span class="hero-rotator-name" id="heroRotatorName"></span></span>.<br>In your pocket.</h1>
                     <p class="hero-description">One mobile app for every ACP-compatible AI agent. Direct connection, no cloud lock-in, no subscriptions.</p>
                     <div class="cta-buttons">
                         <a href="https://docs.aptove.com" target="_blank" class="cta-button primary">Get Started</a>
@@ -387,5 +387,53 @@
             <p>&copy; 2026 Aptove. All rights reserved.</p>
         </div>
     </footer>
+
+<script>
+(function () {
+    var agents = [
+        {
+            name: 'Claude Code',
+            color: '#f59e0b',
+            logo: '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3.5L21.5 20.5H2.5L12 3.5Z" fill="#f59e0b" stroke="#f59e0b" stroke-width="0.4" stroke-linejoin="round"/></svg>'
+        },
+        {
+            name: 'Copilot',
+            color: '#60a5fa',
+            logo: '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" stroke="#60a5fa" stroke-width="1.5"/><rect x="5" y="9.5" width="14" height="5" rx="2.5" fill="#60a5fa"/><circle cx="9.5" cy="12" r="1.5" fill="#0a0a0a"/><circle cx="14.5" cy="12" r="1.5" fill="#0a0a0a"/></svg>'
+        },
+        {
+            name: 'Codex',
+            color: '#34d399',
+            logo: '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g transform="translate(12,12)"><rect x="-3.5" y="-8.5" width="6" height="9" rx="3" fill="#34d399" opacity="0.82"/><rect x="-3.5" y="-8.5" width="6" height="9" rx="3" fill="#34d399" opacity="0.82" transform="rotate(60)"/><rect x="-3.5" y="-8.5" width="6" height="9" rx="3" fill="#34d399" opacity="0.82" transform="rotate(120)"/><rect x="-3.5" y="-8.5" width="6" height="9" rx="3" fill="#34d399" opacity="0.82" transform="rotate(180)"/><rect x="-3.5" y="-8.5" width="6" height="9" rx="3" fill="#34d399" opacity="0.82" transform="rotate(240)"/><rect x="-3.5" y="-8.5" width="6" height="9" rx="3" fill="#34d399" opacity="0.82" transform="rotate(300)"/></g></svg>'
+        }
+    ];
+
+    var current = 0;
+    var rotator = document.getElementById('heroRotator');
+    var logoEl  = document.getElementById('heroRotatorLogo');
+    var nameEl  = document.getElementById('heroRotatorName');
+
+    function set(i) {
+        logoEl.innerHTML = agents[i].logo;
+        nameEl.textContent = agents[i].name;
+        nameEl.style.color = agents[i].color;
+    }
+
+    function tick() {
+        rotator.classList.add('hero-rotator--out');
+        setTimeout(function () {
+            rotator.classList.remove('hero-rotator--out');
+            current = (current + 1) % agents.length;
+            set(current);
+            void rotator.offsetWidth; // force reflow before re-adding class
+            rotator.classList.add('hero-rotator--in');
+            setTimeout(function () { rotator.classList.remove('hero-rotator--in'); }, 380);
+        }, 320);
+    }
+
+    set(0);
+    setInterval(tick, 2800);
+})();
+</script>
 </body>
 </html>

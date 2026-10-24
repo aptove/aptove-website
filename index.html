@@ -68,28 +68,17 @@
                         </defs>
 
                         <!-- Column headers -->
-                        <text x="75" y="44" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="10" font-family="'JetBrains Mono',monospace" font-weight="500" letter-spacing="1.5">MOBILE APPS</text>
+                        <text x="75" y="44" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="10" font-family="'JetBrains Mono',monospace" font-weight="500" letter-spacing="1.5">APTOVE APP</text>
                         <text x="410" y="44" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="10" font-family="'JetBrains Mono',monospace" font-weight="500" letter-spacing="1.5">BRIDGE</text>
                         <text x="742" y="44" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="10" font-family="'JetBrains Mono',monospace" font-weight="500" letter-spacing="1.5">AI AGENTS</text>
 
-                        <!-- iOS Node -->
+                        <!-- Aptove Mobile App Node -->
                         <a href="https://github.com/aptove/ios" target="_blank" class="arch-node-link">
                             <g filter="url(#arch-node-glow)">
-                                <rect x="15" y="62" width="120" height="64" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+                                <rect x="15" y="158" width="120" height="68" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
                             </g>
-                            <text x="75" y="88" text-anchor="middle" font-size="22" font-family="system-ui,sans-serif">📱</text>
-                            <text x="75" y="108" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="600" font-family="'Inter',sans-serif">iOS</text>
-                            <text x="75" y="121" text-anchor="middle" fill="rgba(255,255,255,0.38)" font-size="9" font-family="'JetBrains Mono',monospace">Aptove App</text>
-                        </a>
-
-                        <!-- Android Node -->
-                        <a href="https://github.com/aptove/android" target="_blank" class="arch-node-link">
-                            <g filter="url(#arch-node-glow)">
-                                <rect x="15" y="246" width="120" height="64" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
-                            </g>
-                            <text x="75" y="272" text-anchor="middle" font-size="22" font-family="system-ui,sans-serif">📱</text>
-                            <text x="75" y="292" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="600" font-family="'Inter',sans-serif">Android</text>
-                            <text x="75" y="305" text-anchor="middle" fill="rgba(255,255,255,0.38)" font-size="9" font-family="'JetBrains Mono',monospace">Aptove App</text>
+                            <text x="75" y="184" text-anchor="middle" font-size="22" font-family="system-ui,sans-serif">📱</text>
+                            <text x="75" y="204" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="600" font-family="'Inter',sans-serif">Aptove Mobile App</text>
                         </a>
 
                         <!-- Bridge Node (glow ring + box) -->
@@ -124,22 +113,18 @@
                         <text x="742" y="306" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="600" font-family="'Inter',sans-serif">Any AI Agent</text>
                         <text x="742" y="325" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="10" font-family="'JetBrains Mono',monospace">ACP Compatible</text>
 
-                        <!-- Transport paths: phones → bridge -->
-                        <!-- Tailscale: iOS → Bridge -->
-                        <path id="arch-ts-ios" d="M135,82 C232,82 278,168 330,170" fill="none" stroke="#a78bfa" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.7"/>
-                        <!-- Local: iOS → Bridge -->
-                        <path id="arch-lo-ios" d="M135,100 C232,100 278,184 330,186" fill="none" stroke="#4ade80" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.7"/>
-                        <!-- Tailscale: Android → Bridge -->
-                        <path id="arch-ts-and" d="M135,263 C232,263 278,204 330,204" fill="none" stroke="#a78bfa" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.7"/>
-                        <!-- Local: Android → Bridge -->
-                        <path id="arch-lo-and" d="M135,279 C232,279 278,218 330,218" fill="none" stroke="#4ade80" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.7"/>
+                        <!-- Transport paths: app → bridge -->
+                        <!-- Tailscale: App → Bridge -->
+                        <path id="arch-ts-ios" d="M135,178 C232,178 278,172 330,172" fill="none" stroke="#a78bfa" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.7"/>
+                        <!-- Local: App → Bridge -->
+                        <path id="arch-lo-ios" d="M135,204 C232,204 278,210 330,210" fill="none" stroke="#4ade80" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.7"/>
 
                         <!-- Transport labels -->
-                        <rect x="196" y="57" width="72" height="18" rx="4" fill="rgba(167,139,250,0.12)"/>
-                        <text x="232" y="70" text-anchor="middle" fill="#a78bfa" font-size="10" font-weight="600" font-family="'JetBrains Mono',monospace">Tailscale</text>
+                        <rect x="196" y="153" width="72" height="18" rx="4" fill="rgba(167,139,250,0.12)"/>
+                        <text x="232" y="166" text-anchor="middle" fill="#a78bfa" font-size="10" font-weight="600" font-family="'JetBrains Mono',monospace">Tailscale</text>
 
-                        <rect x="200" y="293" width="60" height="18" rx="4" fill="rgba(74,222,128,0.12)"/>
-                        <text x="230" y="306" text-anchor="middle" fill="#4ade80" font-size="10" font-weight="600" font-family="'JetBrains Mono',monospace">Local</text>
+                        <rect x="200" y="208" width="60" height="18" rx="4" fill="rgba(74,222,128,0.12)"/>
+                        <text x="230" y="221" text-anchor="middle" fill="#4ade80" font-size="10" font-weight="600" font-family="'JetBrains Mono',monospace">Local</text>
 
                         <!-- Bridge → AI client paths -->
                         <path id="arch-br-cop" d="M490,178 C572,178 610,81 660,81" fill="none" stroke="rgba(255,255,255,0.28)" stroke-width="1.5" stroke-dasharray="6,4"/>
@@ -162,20 +147,6 @@
                         </circle>
                         <circle r="4" fill="#4ade80" filter="url(#arch-dot-glow)">
                             <animateMotion dur="2.4s" repeatCount="indefinite" begin="1.5s"><mpath href="#arch-lo-ios"/></animateMotion>
-                        </circle>
-                        <!-- Animated particles: Tailscale Android -->
-                        <circle r="4" fill="#a78bfa" filter="url(#arch-dot-glow)">
-                            <animateMotion dur="2.6s" repeatCount="indefinite" begin="0.8s"><mpath href="#arch-ts-and"/></animateMotion>
-                        </circle>
-                        <circle r="4" fill="#a78bfa" filter="url(#arch-dot-glow)">
-                            <animateMotion dur="2.6s" repeatCount="indefinite" begin="2.1s"><mpath href="#arch-ts-and"/></animateMotion>
-                        </circle>
-                        <!-- Animated particles: Local Android -->
-                        <circle r="4" fill="#4ade80" filter="url(#arch-dot-glow)">
-                            <animateMotion dur="3.2s" repeatCount="indefinite" begin="0.5s"><mpath href="#arch-lo-and"/></animateMotion>
-                        </circle>
-                        <circle r="4" fill="#4ade80" filter="url(#arch-dot-glow)">
-                            <animateMotion dur="3.2s" repeatCount="indefinite" begin="2.1s"><mpath href="#arch-lo-and"/></animateMotion>
                         </circle>
                         <!-- Animated particles: Bridge → Copilot -->
                         <circle r="3.5" fill="rgba(255,255,255,0.85)" filter="url(#arch-dot-glow)">
@@ -371,7 +342,7 @@
                     <p>Aptove is open source with Zero vendor lock-in. You can host your own serviceand build the apps from the source code.</p>
                     <div class="contact-info">
                         <p><svg class="discord-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36" width="20" height="15" style="vertical-align: middle; margin-right: 6px;"><path fill="#5865F2" d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"/></svg><a href="https://discord.gg/gD7AMxBy9y" target="_blank">Join our Discord</a></p>
-                        <p>🐛 <a href="https://github.com/aptove/aptove/issues" target="_blank">Report Issues</a></p>
+                        <p>🐛 <a href="https://github.com/aptove/issues" target="_blank">Report Issues</a></p>
                     </div>
                 </div>
             </div>

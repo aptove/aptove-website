@@ -151,83 +151,69 @@
                         <!-- stdio label -->
                         <text x="572" y="148" text-anchor="middle" fill="rgba(96,165,250,0.7)" font-size="9" font-weight="500" font-family="'JetBrains Mono',monospace" letter-spacing="0.5">stdio</text>
 
-                        <!-- Bidirectional particles: App ↔ Bridge 1 (green/Tailscale) -->
-                        <circle r="3.5" fill="#4ade80" filter="url(#arch-dot-glow)">
-                            <animateMotion dur="2.6s" repeatCount="indefinite" begin="0s"><mpath href="#arch-app-br1"/></animateMotion>
+                        <!--
+                            Cycle = 6s per pair, staggered: pair1=0s, pair2=2s, pair3=4s
+                            Within each 6s cycle:
+                              0–20%  (0–1.2s): App → Bridge
+                             20–40%  (1.2–2.4s): Bridge → Agent
+                             40–50%  pause at Agent
+                             50–70%  (3.0–4.2s): Agent → Bridge (reverse)
+                             70–90%  (4.2–5.4s): Bridge → App (reverse)
+                             90–100% pause at App
+                        -->
+
+                        <!-- Pair 1: App ↔ Bridge1 ↔ Copilot (green / blue), begin=0s -->
+                        <circle r="3.5" fill="#4ade80" filter="url(#arch-dot-glow)" opacity="0">
+                            <animateMotion dur="6s" repeatCount="indefinite" begin="0s" calcMode="linear" keyTimes="0;0.001;0.199;0.2;1" keyPoints="0;0;1;1;1"><mpath href="#arch-app-br1"/></animateMotion>
+                            <animate attributeName="opacity" dur="6s" repeatCount="indefinite" begin="0s" calcMode="discrete" keyTimes="0;0.001;0.2;1" values="0;1;0;0"/>
                         </circle>
-                        <circle r="3.5" fill="#4ade80" filter="url(#arch-dot-glow)">
-                            <animateMotion dur="2.6s" repeatCount="indefinite" begin="1.3s"><mpath href="#arch-app-br1"/></animateMotion>
+                        <circle r="3.5" fill="#60a5fa" filter="url(#arch-dot-glow)" opacity="0">
+                            <animateMotion dur="6s" repeatCount="indefinite" begin="0s" calcMode="linear" keyTimes="0;0.2;0.201;0.399;0.4;1" keyPoints="0;0;0;1;1;1"><mpath href="#arch-br1-cop"/></animateMotion>
+                            <animate attributeName="opacity" dur="6s" repeatCount="indefinite" begin="0s" calcMode="discrete" keyTimes="0;0.2;0.201;0.4;1" values="0;0;1;0;0"/>
                         </circle>
-                        <circle r="3.5" fill="#4ade80" filter="url(#arch-dot-glow)">
-                            <animateMotion dur="2.6s" repeatCount="indefinite" begin="0.6s" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#arch-app-br1"/></animateMotion>
+                        <circle r="3.5" fill="#60a5fa" filter="url(#arch-dot-glow)" opacity="0">
+                            <animateMotion dur="6s" repeatCount="indefinite" begin="0s" calcMode="linear" keyTimes="0;0.5;0.501;0.699;0.7;1" keyPoints="1;1;1;0;0;0"><mpath href="#arch-br1-cop"/></animateMotion>
+                            <animate attributeName="opacity" dur="6s" repeatCount="indefinite" begin="0s" calcMode="discrete" keyTimes="0;0.5;0.501;0.7;1" values="0;0;1;0;0"/>
                         </circle>
-                        <circle r="3.5" fill="#4ade80" filter="url(#arch-dot-glow)">
-                            <animateMotion dur="2.6s" repeatCount="indefinite" begin="1.9s" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#arch-app-br1"/></animateMotion>
+                        <circle r="3.5" fill="#4ade80" filter="url(#arch-dot-glow)" opacity="0">
+                            <animateMotion dur="6s" repeatCount="indefinite" begin="0s" calcMode="linear" keyTimes="0;0.7;0.701;0.899;0.9;1" keyPoints="1;1;1;0;0;0"><mpath href="#arch-app-br1"/></animateMotion>
+                            <animate attributeName="opacity" dur="6s" repeatCount="indefinite" begin="0s" calcMode="discrete" keyTimes="0;0.7;0.701;0.9;1" values="0;0;1;0;0"/>
                         </circle>
-                        <!-- Bidirectional particles: App ↔ Bridge 2 (orange/Local) -->
-                        <circle r="3.5" fill="#fb923c" filter="url(#arch-dot-glow)">
-                            <animateMotion dur="2.4s" repeatCount="indefinite" begin="0.4s"><mpath href="#arch-app-br2"/></animateMotion>
+
+                        <!-- Pair 2: App ↔ Bridge2 ↔ Codex (orange / blue), begin=2s -->
+                        <circle r="3.5" fill="#fb923c" filter="url(#arch-dot-glow)" opacity="0">
+                            <animateMotion dur="6s" repeatCount="indefinite" begin="2s" calcMode="linear" keyTimes="0;0.001;0.199;0.2;1" keyPoints="0;0;1;1;1"><mpath href="#arch-app-br2"/></animateMotion>
+                            <animate attributeName="opacity" dur="6s" repeatCount="indefinite" begin="2s" calcMode="discrete" keyTimes="0;0.001;0.2;1" values="0;1;0;0"/>
                         </circle>
-                        <circle r="3.5" fill="#fb923c" filter="url(#arch-dot-glow)">
-                            <animateMotion dur="2.4s" repeatCount="indefinite" begin="1.6s"><mpath href="#arch-app-br2"/></animateMotion>
+                        <circle r="3.5" fill="#60a5fa" filter="url(#arch-dot-glow)" opacity="0">
+                            <animateMotion dur="6s" repeatCount="indefinite" begin="2s" calcMode="linear" keyTimes="0;0.2;0.201;0.399;0.4;1" keyPoints="0;0;0;1;1;1"><mpath href="#arch-br2-cla"/></animateMotion>
+                            <animate attributeName="opacity" dur="6s" repeatCount="indefinite" begin="2s" calcMode="discrete" keyTimes="0;0.2;0.201;0.4;1" values="0;0;1;0;0"/>
                         </circle>
-                        <circle r="3.5" fill="#fb923c" filter="url(#arch-dot-glow)">
-                            <animateMotion dur="2.4s" repeatCount="indefinite" begin="0s" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#arch-app-br2"/></animateMotion>
+                        <circle r="3.5" fill="#60a5fa" filter="url(#arch-dot-glow)" opacity="0">
+                            <animateMotion dur="6s" repeatCount="indefinite" begin="2s" calcMode="linear" keyTimes="0;0.5;0.501;0.699;0.7;1" keyPoints="1;1;1;0;0;0"><mpath href="#arch-br2-cla"/></animateMotion>
+                            <animate attributeName="opacity" dur="6s" repeatCount="indefinite" begin="2s" calcMode="discrete" keyTimes="0;0.5;0.501;0.7;1" values="0;0;1;0;0"/>
                         </circle>
-                        <circle r="3.5" fill="#fb923c" filter="url(#arch-dot-glow)">
-                            <animateMotion dur="2.4s" repeatCount="indefinite" begin="1.2s" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#arch-app-br2"/></animateMotion>
+                        <circle r="3.5" fill="#fb923c" filter="url(#arch-dot-glow)" opacity="0">
+                            <animateMotion dur="6s" repeatCount="indefinite" begin="2s" calcMode="linear" keyTimes="0;0.7;0.701;0.899;0.9;1" keyPoints="1;1;1;0;0;0"><mpath href="#arch-app-br2"/></animateMotion>
+                            <animate attributeName="opacity" dur="6s" repeatCount="indefinite" begin="2s" calcMode="discrete" keyTimes="0;0.7;0.701;0.9;1" values="0;0;1;0;0"/>
                         </circle>
-                        <!-- Bidirectional particles: App ↔ Bridge 3 (green/Tailscale) -->
-                        <circle r="3.5" fill="#4ade80" filter="url(#arch-dot-glow)">
-                            <animateMotion dur="2.8s" repeatCount="indefinite" begin="0.8s"><mpath href="#arch-app-br3"/></animateMotion>
+
+                        <!-- Pair 3: App ↔ Bridge3 ↔ Any Agent (green / blue), begin=4s -->
+                        <circle r="3.5" fill="#4ade80" filter="url(#arch-dot-glow)" opacity="0">
+                            <animateMotion dur="6s" repeatCount="indefinite" begin="4s" calcMode="linear" keyTimes="0;0.001;0.199;0.2;1" keyPoints="0;0;1;1;1"><mpath href="#arch-app-br3"/></animateMotion>
+                            <animate attributeName="opacity" dur="6s" repeatCount="indefinite" begin="4s" calcMode="discrete" keyTimes="0;0.001;0.2;1" values="0;1;0;0"/>
                         </circle>
-                        <circle r="3.5" fill="#4ade80" filter="url(#arch-dot-glow)">
-                            <animateMotion dur="2.8s" repeatCount="indefinite" begin="2.2s"><mpath href="#arch-app-br3"/></animateMotion>
+                        <circle r="3.5" fill="#60a5fa" filter="url(#arch-dot-glow)" opacity="0">
+                            <animateMotion dur="6s" repeatCount="indefinite" begin="4s" calcMode="linear" keyTimes="0;0.2;0.201;0.399;0.4;1" keyPoints="0;0;0;1;1;1"><mpath href="#arch-br3-any"/></animateMotion>
+                            <animate attributeName="opacity" dur="6s" repeatCount="indefinite" begin="4s" calcMode="discrete" keyTimes="0;0.2;0.201;0.4;1" values="0;0;1;0;0"/>
                         </circle>
-                        <circle r="3.5" fill="#4ade80" filter="url(#arch-dot-glow)">
-                            <animateMotion dur="2.8s" repeatCount="indefinite" begin="0.1s" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#arch-app-br3"/></animateMotion>
+                        <circle r="3.5" fill="#60a5fa" filter="url(#arch-dot-glow)" opacity="0">
+                            <animateMotion dur="6s" repeatCount="indefinite" begin="4s" calcMode="linear" keyTimes="0;0.5;0.501;0.699;0.7;1" keyPoints="1;1;1;0;0;0"><mpath href="#arch-br3-any"/></animateMotion>
+                            <animate attributeName="opacity" dur="6s" repeatCount="indefinite" begin="4s" calcMode="discrete" keyTimes="0;0.5;0.501;0.7;1" values="0;0;1;0;0"/>
                         </circle>
-                        <circle r="3.5" fill="#4ade80" filter="url(#arch-dot-glow)">
-                            <animateMotion dur="2.8s" repeatCount="indefinite" begin="1.5s" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#arch-app-br3"/></animateMotion>
-                        </circle>
-                        <!-- Bidirectional particles: Bridge 1 ↔ Copilot (blue) -->
-                        <circle r="3.5" fill="#60a5fa" filter="url(#arch-dot-glow)">
-                            <animateMotion dur="2.2s" repeatCount="indefinite" begin="0.2s"><mpath href="#arch-br1-cop"/></animateMotion>
-                        </circle>
-                        <circle r="3.5" fill="#60a5fa" filter="url(#arch-dot-glow)">
-                            <animateMotion dur="2.2s" repeatCount="indefinite" begin="1.3s"><mpath href="#arch-br1-cop"/></animateMotion>
-                        </circle>
-                        <circle r="3.5" fill="#60a5fa" filter="url(#arch-dot-glow)">
-                            <animateMotion dur="2.2s" repeatCount="indefinite" begin="0.8s" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#arch-br1-cop"/></animateMotion>
-                        </circle>
-                        <circle r="3.5" fill="#60a5fa" filter="url(#arch-dot-glow)">
-                            <animateMotion dur="2.2s" repeatCount="indefinite" begin="1.9s" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#arch-br1-cop"/></animateMotion>
-                        </circle>
-                        <!-- Bidirectional particles: Bridge 2 ↔ Codex (blue) -->
-                        <circle r="3.5" fill="#60a5fa" filter="url(#arch-dot-glow)">
-                            <animateMotion dur="2.0s" repeatCount="indefinite" begin="0s"><mpath href="#arch-br2-cla"/></animateMotion>
-                        </circle>
-                        <circle r="3.5" fill="#60a5fa" filter="url(#arch-dot-glow)">
-                            <animateMotion dur="2.0s" repeatCount="indefinite" begin="1.0s"><mpath href="#arch-br2-cla"/></animateMotion>
-                        </circle>
-                        <circle r="3.5" fill="#60a5fa" filter="url(#arch-dot-glow)">
-                            <animateMotion dur="2.0s" repeatCount="indefinite" begin="0.5s" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#arch-br2-cla"/></animateMotion>
-                        </circle>
-                        <circle r="3.5" fill="#60a5fa" filter="url(#arch-dot-glow)">
-                            <animateMotion dur="2.0s" repeatCount="indefinite" begin="1.5s" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#arch-br2-cla"/></animateMotion>
-                        </circle>
-                        <!-- Bidirectional particles: Bridge 3 ↔ Any Agent (blue) -->
-                        <circle r="3.5" fill="#60a5fa" filter="url(#arch-dot-glow)">
-                            <animateMotion dur="2.5s" repeatCount="indefinite" begin="0.6s"><mpath href="#arch-br3-any"/></animateMotion>
-                        </circle>
-                        <circle r="3.5" fill="#60a5fa" filter="url(#arch-dot-glow)">
-                            <animateMotion dur="2.5s" repeatCount="indefinite" begin="1.8s"><mpath href="#arch-br3-any"/></animateMotion>
-                        </circle>
-                        <circle r="3.5" fill="#60a5fa" filter="url(#arch-dot-glow)">
-                            <animateMotion dur="2.5s" repeatCount="indefinite" begin="0.1s" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#arch-br3-any"/></animateMotion>
-                        </circle>
-                        <circle r="3.5" fill="#60a5fa" filter="url(#arch-dot-glow)">
-                            <animateMotion dur="2.5s" repeatCount="indefinite" begin="1.3s" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#arch-br3-any"/></animateMotion>
+                        <circle r="3.5" fill="#4ade80" filter="url(#arch-dot-glow)" opacity="0">
+                            <animateMotion dur="6s" repeatCount="indefinite" begin="4s" calcMode="linear" keyTimes="0;0.7;0.701;0.899;0.9;1" keyPoints="1;1;1;0;0;0"><mpath href="#arch-app-br3"/></animateMotion>
+                            <animate attributeName="opacity" dur="6s" repeatCount="indefinite" begin="4s" calcMode="discrete" keyTimes="0;0.7;0.701;0.9;1" values="0;0;1;0;0"/>
                         </circle>
                     </svg>
                 </div>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aptove Privacy Policy">
+    <title>Privacy Policy - Aptove</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=3">
+    <style>
+        .legal-page {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 80px 24px 100px;
+        }
+        .legal-page h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 0.4rem;
+        }
+        .legal-page .last-updated {
+            font-size: 0.85rem;
+            color: var(--text-3);
+            margin-bottom: 3rem;
+        }
+        .legal-page h2 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 2.5rem;
+            margin-bottom: 0.6rem;
+            color: var(--text);
+        }
+        .legal-page p {
+            font-size: 0.95rem;
+            color: var(--text-2);
+            line-height: 1.75;
+            margin-bottom: 1rem;
+        }
+        .legal-page ul {
+            margin: 0 0 1rem 1.5rem;
+        }
+        .legal-page ul li {
+            font-size: 0.95rem;
+            color: var(--text-2);
+            line-height: 1.75;
+            margin-bottom: 0.3rem;
+        }
+        .legal-page a {
+            color: var(--text);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+        .legal-back {
+            display: inline-block;
+            font-size: 0.85rem;
+            color: var(--text-3);
+            text-decoration: none;
+            margin-bottom: 2.5rem;
+            transition: color 0.2s;
+        }
+        .legal-back:hover {
+            color: var(--text);
+        }
+        .highlight-box {
+            background: var(--bg-2);
+            border: 1px solid var(--border-strong);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            margin-bottom: 1rem;
+        }
+        .highlight-box p {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="/" style="display:flex;align-items:center;gap:0.5rem;text-decoration:none;">
+                        <img src="logo.png" alt="Aptove Logo" class="logo-img">
+                        <span class="logo-text">aptove</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="legal-page">
+            <a href="/" class="legal-back">&larr; Back to home</a>
+            <h1>Privacy Policy</h1>
+            <p class="last-updated">Last updated: October 2026</p>
+
+            <div class="highlight-box">
+                <p><strong>Short version:</strong> The Aptove mobile app and bridge software do not send any personal information to Aptove. Only the dashboard (dash.aptove.com) collects your email address for authentication purposes.</p>
+            </div>
+
+            <h2>1. Overview</h2>
+            <p>Aptove is an open source project. We take privacy seriously and collect the minimum data necessary to operate the service. This policy explains what data each component of Aptove collects and how it is used.</p>
+
+            <h2>2. Mobile App</h2>
+            <p>The Aptove iOS mobile app does not send any personal information to Aptove. All data — including your agent configurations, credentials, and conversation history — is stored locally on your device. The app communicates directly with the bridge you configure; no data is routed through Aptove servers.</p>
+            <p>The app may communicate with push relay infrastructure (if you enable push notifications), but this is limited to delivering push payloads and does not include personal information beyond a device push token.</p>
+
+            <h2>3. Bridge Software</h2>
+            <p>The Aptove bridge is software you run on your own machine. It does not send any personal information to Aptove. All traffic flows between your device and the bridge directly. If you use the hosted push relay, the bridge sends minimal signaling data (no message content) to deliver push notifications to your device.</p>
+
+            <h2>4. Dashboard (dash.aptove.com)</h2>
+            <p>The Aptove dashboard is the only component that collects personal information. When you sign in at <a href="https://dash.aptove.com" target="_blank">dash.aptove.com</a>, the following data is collected:</p>
+            <ul>
+                <li><strong>Email address</strong> — collected via Auth0 for authentication purposes.</li>
+                <li><strong>Client credentials</strong> — push relay client IDs you generate are associated with your account.</li>
+            </ul>
+            <p>We do not sell your data. Your email is used solely to authenticate you to the dashboard and is not shared with third parties beyond Auth0 (our identity provider).</p>
+
+            <h2>5. Auth0</h2>
+            <p>Authentication for the dashboard is handled by <a href="https://auth0.com" target="_blank">Auth0</a>. When you log in, Auth0 processes your email address according to their own <a href="https://auth0.com/privacy" target="_blank">privacy policy</a>.</p>
+
+            <h2>6. Push Notifications (Optional)</h2>
+            <p>Push notifications are an optional feature. If you enable them:</p>
+            <ul>
+                <li>Your device push token is sent to the push relay to deliver notifications.</li>
+                <li>Push payloads contain only minimal information (e.g. a notification that your agent has responded).</li>
+                <li>No message content is included in push payloads.</li>
+            </ul>
+            <p>You can use the self-hosted push relay option if you prefer to keep all infrastructure under your own control.</p>
+
+            <h2>7. Open Source</h2>
+            <p>All Aptove components are open source. You can inspect exactly what data is collected and transmitted by reviewing the source code on <a href="https://github.com/aptove" target="_blank">GitHub</a>. You may also self-host any component to have full control over your data.</p>
+
+            <h2>8. Data Retention</h2>
+            <p>Dashboard account data (email, client credentials) is retained for as long as your account is active. You may request deletion by contacting us via <a href="https://github.com/aptove/aptove/issues" target="_blank">GitHub</a> or <a href="https://discord.gg/gD7AMxBy9y" target="_blank">Discord</a>.</p>
+
+            <h2>9. Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated date.</p>
+
+            <h2>10. Contact</h2>
+            <p>Questions about privacy? Open an issue on <a href="https://github.com/aptove/aptove/issues" target="_blank">GitHub</a> or reach out via <a href="https://discord.gg/gD7AMxBy9y" target="_blank">Discord</a>.</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Aptove. All rights reserved. &nbsp;·&nbsp; <a href="/terms.html" style="color:inherit;">Terms of Service</a> &nbsp;·&nbsp; <a href="/privacy.html" style="color:inherit;">Privacy Policy</a></p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -69,7 +69,7 @@
 
                         <!-- Column headers -->
                         <text x="75" y="44" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="10" font-family="'JetBrains Mono',monospace" font-weight="500" letter-spacing="1.5">APTOVE APP</text>
-                        <text x="410" y="44" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="10" font-family="'JetBrains Mono',monospace" font-weight="500" letter-spacing="1.5">BRIDGE</text>
+                        <text x="402" y="44" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="10" font-family="'JetBrains Mono',monospace" font-weight="500" letter-spacing="1.5">BRIDGE</text>
                         <text x="742" y="44" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="10" font-family="'JetBrains Mono',monospace" font-weight="500" letter-spacing="1.5">AI AGENTS</text>
 
                         <!-- Aptove Mobile App Node (phone shape) -->
@@ -82,14 +82,31 @@
                             <text x="75" y="211" text-anchor="middle" fill="#ffffff" font-size="9" font-weight="600" font-family="'Inter',sans-serif">Mobile App</text>
                         </a>
 
-                        <!-- Bridge Node (glow ring + box) -->
+                        <!-- Bridge 1 (paired with GitHub Copilot) -->
                         <a href="https://github.com/aptove/bridge" target="_blank" class="arch-node-link">
-                            <rect x="326" y="151" width="168" height="90" rx="14" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1" class="bridge-glow-ring"/>
                             <g filter="url(#arch-node-glow)">
-                                <rect x="330" y="155" width="160" height="82" rx="12" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.7)" stroke-width="2"/>
+                                <rect x="320" y="52" width="165" height="58" rx="10" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
                             </g>
-                            <text x="410" y="185" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700" font-family="'Inter',sans-serif">Bridge</text>
-                            <text x="410" y="203" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="10" font-family="'JetBrains Mono',monospace">transport ↔ stdio</text>
+                            <text x="402" y="76" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="700" font-family="'Inter',sans-serif">Bridge</text>
+                            <text x="402" y="95" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="10" font-family="'JetBrains Mono',monospace">aptove/bridge ↗</text>
+                        </a>
+
+                        <!-- Bridge 2 (paired with Codex) -->
+                        <a href="https://github.com/aptove/bridge" target="_blank" class="arch-node-link">
+                            <g filter="url(#arch-node-glow)">
+                                <rect x="320" y="167" width="165" height="58" rx="10" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+                            </g>
+                            <text x="402" y="191" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="700" font-family="'Inter',sans-serif">Bridge</text>
+                            <text x="402" y="210" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="10" font-family="'JetBrains Mono',monospace">aptove/bridge ↗</text>
+                        </a>
+
+                        <!-- Bridge 3 (paired with Any Agent) -->
+                        <a href="https://github.com/aptove/bridge" target="_blank" class="arch-node-link">
+                            <g filter="url(#arch-node-glow)">
+                                <rect x="320" y="282" width="165" height="58" rx="10" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+                            </g>
+                            <text x="402" y="306" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="700" font-family="'Inter',sans-serif">Bridge</text>
+                            <text x="402" y="325" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="10" font-family="'JetBrains Mono',monospace">aptove/bridge ↗</text>
                         </a>
 
                         <!-- GitHub Copilot Node -->
@@ -113,48 +130,64 @@
                         <text x="742" y="306" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="600" font-family="'Inter',sans-serif">Any AI Agent</text>
                         <text x="742" y="325" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="10" font-family="'JetBrains Mono',monospace">ACP Compatible</text>
 
-                        <!-- Transport path: App → Bridge (single, green, horizontal) -->
-                        <path id="arch-app-bridge" d="M110,189 H330" fill="none" stroke="#4ade80" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.8"/>
+                        <!-- App → Bridge paths (green fan) -->
+                        <path id="arch-app-br1" d="M110,189 C215,150 265,81 320,81" fill="none" stroke="#4ade80" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.8"/>
+                        <path id="arch-app-br2" d="M110,189 C215,189 265,196 320,196" fill="none" stroke="#4ade80" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.8"/>
+                        <path id="arch-app-br3" d="M110,189 C215,230 265,311 320,311" fill="none" stroke="#4ade80" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.8"/>
 
-                        <!-- Transport label -->
-                        <rect x="174" y="170" width="92" height="18" rx="4" fill="rgba(74,222,128,0.1)"/>
-                        <text x="220" y="183" text-anchor="middle" fill="#4ade80" font-size="9" font-weight="600" font-family="'JetBrains Mono',monospace">Tailscale/Local</text>
+                        <!-- Tailscale/Local label -->
+                        <rect x="148" y="168" width="92" height="18" rx="4" fill="rgba(74,222,128,0.1)"/>
+                        <text x="194" y="181" text-anchor="middle" fill="#4ade80" font-size="9" font-weight="600" font-family="'JetBrains Mono',monospace">Tailscale/Local</text>
 
-                        <!-- Bridge → AI client paths (blue) -->
-                        <path id="arch-br-cop" d="M490,178 C572,178 610,81 660,81" fill="none" stroke="rgba(96,165,250,0.65)" stroke-width="1.5" stroke-dasharray="6,4"/>
-                        <path id="arch-br-cla" d="M490,196 C572,196 610,196 660,196" fill="none" stroke="rgba(96,165,250,0.65)" stroke-width="1.5" stroke-dasharray="6,4"/>
-                        <path id="arch-br-any" d="M490,214 C572,214 610,311 660,311" fill="none" stroke="rgba(96,165,250,0.65)" stroke-width="1.5" stroke-dasharray="6,4"/>
+                        <!-- Bridge → Agent paths (horizontal, blue) -->
+                        <path id="arch-br1-cop" d="M485,81 H660" fill="none" stroke="rgba(96,165,250,0.65)" stroke-width="1.5" stroke-dasharray="6,4"/>
+                        <path id="arch-br2-cla" d="M485,196 H660" fill="none" stroke="rgba(96,165,250,0.65)" stroke-width="1.5" stroke-dasharray="6,4"/>
+                        <path id="arch-br3-any" d="M485,311 H660" fill="none" stroke="rgba(96,165,250,0.65)" stroke-width="1.5" stroke-dasharray="6,4"/>
 
                         <!-- stdio label -->
                         <text x="572" y="148" text-anchor="middle" fill="rgba(96,165,250,0.7)" font-size="9" font-weight="500" font-family="'JetBrains Mono',monospace" letter-spacing="0.5">stdio</text>
 
-                        <!-- Animated particles: App → Bridge (green) -->
-                        <circle r="4" fill="#4ade80" filter="url(#arch-dot-glow)">
-                            <animateMotion dur="2.6s" repeatCount="indefinite" begin="0s"><mpath href="#arch-app-bridge"/></animateMotion>
+                        <!-- Animated particles: App → Bridge 1 -->
+                        <circle r="3.5" fill="#4ade80" filter="url(#arch-dot-glow)">
+                            <animateMotion dur="2.6s" repeatCount="indefinite" begin="0s"><mpath href="#arch-app-br1"/></animateMotion>
                         </circle>
-                        <circle r="4" fill="#4ade80" filter="url(#arch-dot-glow)">
-                            <animateMotion dur="2.6s" repeatCount="indefinite" begin="1.3s"><mpath href="#arch-app-bridge"/></animateMotion>
+                        <circle r="3.5" fill="#4ade80" filter="url(#arch-dot-glow)">
+                            <animateMotion dur="2.6s" repeatCount="indefinite" begin="1.3s"><mpath href="#arch-app-br1"/></animateMotion>
                         </circle>
-                        <!-- Animated particles: Bridge → Copilot (blue) -->
+                        <!-- Animated particles: App → Bridge 2 -->
+                        <circle r="3.5" fill="#4ade80" filter="url(#arch-dot-glow)">
+                            <animateMotion dur="2.4s" repeatCount="indefinite" begin="0.4s"><mpath href="#arch-app-br2"/></animateMotion>
+                        </circle>
+                        <circle r="3.5" fill="#4ade80" filter="url(#arch-dot-glow)">
+                            <animateMotion dur="2.4s" repeatCount="indefinite" begin="1.6s"><mpath href="#arch-app-br2"/></animateMotion>
+                        </circle>
+                        <!-- Animated particles: App → Bridge 3 -->
+                        <circle r="3.5" fill="#4ade80" filter="url(#arch-dot-glow)">
+                            <animateMotion dur="2.8s" repeatCount="indefinite" begin="0.8s"><mpath href="#arch-app-br3"/></animateMotion>
+                        </circle>
+                        <circle r="3.5" fill="#4ade80" filter="url(#arch-dot-glow)">
+                            <animateMotion dur="2.8s" repeatCount="indefinite" begin="2.2s"><mpath href="#arch-app-br3"/></animateMotion>
+                        </circle>
+                        <!-- Animated particles: Bridge 1 → Copilot (blue) -->
                         <circle r="3.5" fill="#60a5fa" filter="url(#arch-dot-glow)">
-                            <animateMotion dur="2.5s" repeatCount="indefinite" begin="0.2s"><mpath href="#arch-br-cop"/></animateMotion>
+                            <animateMotion dur="2.2s" repeatCount="indefinite" begin="0.2s"><mpath href="#arch-br1-cop"/></animateMotion>
                         </circle>
                         <circle r="3.5" fill="#60a5fa" filter="url(#arch-dot-glow)">
-                            <animateMotion dur="2.5s" repeatCount="indefinite" begin="1.45s"><mpath href="#arch-br-cop"/></animateMotion>
+                            <animateMotion dur="2.2s" repeatCount="indefinite" begin="1.3s"><mpath href="#arch-br1-cop"/></animateMotion>
                         </circle>
-                        <!-- Animated particles: Bridge → Claude (blue) -->
+                        <!-- Animated particles: Bridge 2 → Codex (blue) -->
                         <circle r="3.5" fill="#60a5fa" filter="url(#arch-dot-glow)">
-                            <animateMotion dur="2.0s" repeatCount="indefinite" begin="0s"><mpath href="#arch-br-cla"/></animateMotion>
-                        </circle>
-                        <circle r="3.5" fill="#60a5fa" filter="url(#arch-dot-glow)">
-                            <animateMotion dur="2.0s" repeatCount="indefinite" begin="1.0s"><mpath href="#arch-br-cla"/></animateMotion>
-                        </circle>
-                        <!-- Animated particles: Bridge → Any Agent (blue) -->
-                        <circle r="3.5" fill="#60a5fa" filter="url(#arch-dot-glow)">
-                            <animateMotion dur="3.0s" repeatCount="indefinite" begin="0.8s"><mpath href="#arch-br-any"/></animateMotion>
+                            <animateMotion dur="2.0s" repeatCount="indefinite" begin="0s"><mpath href="#arch-br2-cla"/></animateMotion>
                         </circle>
                         <circle r="3.5" fill="#60a5fa" filter="url(#arch-dot-glow)">
-                            <animateMotion dur="3.0s" repeatCount="indefinite" begin="2.3s"><mpath href="#arch-br-any"/></animateMotion>
+                            <animateMotion dur="2.0s" repeatCount="indefinite" begin="1.0s"><mpath href="#arch-br2-cla"/></animateMotion>
+                        </circle>
+                        <!-- Animated particles: Bridge 3 → Any Agent (blue) -->
+                        <circle r="3.5" fill="#60a5fa" filter="url(#arch-dot-glow)">
+                            <animateMotion dur="2.5s" repeatCount="indefinite" begin="0.6s"><mpath href="#arch-br3-any"/></animateMotion>
+                        </circle>
+                        <circle r="3.5" fill="#60a5fa" filter="url(#arch-dot-glow)">
+                            <animateMotion dur="2.5s" repeatCount="indefinite" begin="1.8s"><mpath href="#arch-br3-any"/></animateMotion>
                         </circle>
                     </svg>
                 </div>

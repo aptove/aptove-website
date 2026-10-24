@@ -151,47 +151,83 @@
                         <!-- stdio label -->
                         <text x="572" y="148" text-anchor="middle" fill="rgba(96,165,250,0.7)" font-size="9" font-weight="500" font-family="'JetBrains Mono',monospace" letter-spacing="0.5">stdio</text>
 
-                        <!-- Animated particles: App → Bridge 1 -->
+                        <!-- Bidirectional particles: App ↔ Bridge 1 (green/Tailscale) -->
                         <circle r="3.5" fill="#4ade80" filter="url(#arch-dot-glow)">
                             <animateMotion dur="2.6s" repeatCount="indefinite" begin="0s"><mpath href="#arch-app-br1"/></animateMotion>
                         </circle>
                         <circle r="3.5" fill="#4ade80" filter="url(#arch-dot-glow)">
                             <animateMotion dur="2.6s" repeatCount="indefinite" begin="1.3s"><mpath href="#arch-app-br1"/></animateMotion>
                         </circle>
-                        <!-- Animated particles: App → Bridge 2 (orange/Local) -->
+                        <circle r="3.5" fill="#4ade80" filter="url(#arch-dot-glow)">
+                            <animateMotion dur="2.6s" repeatCount="indefinite" begin="0.6s" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#arch-app-br1"/></animateMotion>
+                        </circle>
+                        <circle r="3.5" fill="#4ade80" filter="url(#arch-dot-glow)">
+                            <animateMotion dur="2.6s" repeatCount="indefinite" begin="1.9s" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#arch-app-br1"/></animateMotion>
+                        </circle>
+                        <!-- Bidirectional particles: App ↔ Bridge 2 (orange/Local) -->
                         <circle r="3.5" fill="#fb923c" filter="url(#arch-dot-glow)">
                             <animateMotion dur="2.4s" repeatCount="indefinite" begin="0.4s"><mpath href="#arch-app-br2"/></animateMotion>
                         </circle>
                         <circle r="3.5" fill="#fb923c" filter="url(#arch-dot-glow)">
                             <animateMotion dur="2.4s" repeatCount="indefinite" begin="1.6s"><mpath href="#arch-app-br2"/></animateMotion>
                         </circle>
-                        <!-- Animated particles: App → Bridge 3 -->
+                        <circle r="3.5" fill="#fb923c" filter="url(#arch-dot-glow)">
+                            <animateMotion dur="2.4s" repeatCount="indefinite" begin="0s" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#arch-app-br2"/></animateMotion>
+                        </circle>
+                        <circle r="3.5" fill="#fb923c" filter="url(#arch-dot-glow)">
+                            <animateMotion dur="2.4s" repeatCount="indefinite" begin="1.2s" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#arch-app-br2"/></animateMotion>
+                        </circle>
+                        <!-- Bidirectional particles: App ↔ Bridge 3 (green/Tailscale) -->
                         <circle r="3.5" fill="#4ade80" filter="url(#arch-dot-glow)">
                             <animateMotion dur="2.8s" repeatCount="indefinite" begin="0.8s"><mpath href="#arch-app-br3"/></animateMotion>
                         </circle>
                         <circle r="3.5" fill="#4ade80" filter="url(#arch-dot-glow)">
                             <animateMotion dur="2.8s" repeatCount="indefinite" begin="2.2s"><mpath href="#arch-app-br3"/></animateMotion>
                         </circle>
-                        <!-- Animated particles: Bridge 1 → Copilot (blue) -->
+                        <circle r="3.5" fill="#4ade80" filter="url(#arch-dot-glow)">
+                            <animateMotion dur="2.8s" repeatCount="indefinite" begin="0.1s" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#arch-app-br3"/></animateMotion>
+                        </circle>
+                        <circle r="3.5" fill="#4ade80" filter="url(#arch-dot-glow)">
+                            <animateMotion dur="2.8s" repeatCount="indefinite" begin="1.5s" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#arch-app-br3"/></animateMotion>
+                        </circle>
+                        <!-- Bidirectional particles: Bridge 1 ↔ Copilot (blue) -->
                         <circle r="3.5" fill="#60a5fa" filter="url(#arch-dot-glow)">
                             <animateMotion dur="2.2s" repeatCount="indefinite" begin="0.2s"><mpath href="#arch-br1-cop"/></animateMotion>
                         </circle>
                         <circle r="3.5" fill="#60a5fa" filter="url(#arch-dot-glow)">
                             <animateMotion dur="2.2s" repeatCount="indefinite" begin="1.3s"><mpath href="#arch-br1-cop"/></animateMotion>
                         </circle>
-                        <!-- Animated particles: Bridge 2 → Codex (blue) -->
+                        <circle r="3.5" fill="#60a5fa" filter="url(#arch-dot-glow)">
+                            <animateMotion dur="2.2s" repeatCount="indefinite" begin="0.8s" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#arch-br1-cop"/></animateMotion>
+                        </circle>
+                        <circle r="3.5" fill="#60a5fa" filter="url(#arch-dot-glow)">
+                            <animateMotion dur="2.2s" repeatCount="indefinite" begin="1.9s" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#arch-br1-cop"/></animateMotion>
+                        </circle>
+                        <!-- Bidirectional particles: Bridge 2 ↔ Codex (blue) -->
                         <circle r="3.5" fill="#60a5fa" filter="url(#arch-dot-glow)">
                             <animateMotion dur="2.0s" repeatCount="indefinite" begin="0s"><mpath href="#arch-br2-cla"/></animateMotion>
                         </circle>
                         <circle r="3.5" fill="#60a5fa" filter="url(#arch-dot-glow)">
                             <animateMotion dur="2.0s" repeatCount="indefinite" begin="1.0s"><mpath href="#arch-br2-cla"/></animateMotion>
                         </circle>
-                        <!-- Animated particles: Bridge 3 → Any Agent (blue) -->
+                        <circle r="3.5" fill="#60a5fa" filter="url(#arch-dot-glow)">
+                            <animateMotion dur="2.0s" repeatCount="indefinite" begin="0.5s" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#arch-br2-cla"/></animateMotion>
+                        </circle>
+                        <circle r="3.5" fill="#60a5fa" filter="url(#arch-dot-glow)">
+                            <animateMotion dur="2.0s" repeatCount="indefinite" begin="1.5s" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#arch-br2-cla"/></animateMotion>
+                        </circle>
+                        <!-- Bidirectional particles: Bridge 3 ↔ Any Agent (blue) -->
                         <circle r="3.5" fill="#60a5fa" filter="url(#arch-dot-glow)">
                             <animateMotion dur="2.5s" repeatCount="indefinite" begin="0.6s"><mpath href="#arch-br3-any"/></animateMotion>
                         </circle>
                         <circle r="3.5" fill="#60a5fa" filter="url(#arch-dot-glow)">
                             <animateMotion dur="2.5s" repeatCount="indefinite" begin="1.8s"><mpath href="#arch-br3-any"/></animateMotion>
+                        </circle>
+                        <circle r="3.5" fill="#60a5fa" filter="url(#arch-dot-glow)">
+                            <animateMotion dur="2.5s" repeatCount="indefinite" begin="0.1s" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#arch-br3-any"/></animateMotion>
+                        </circle>
+                        <circle r="3.5" fill="#60a5fa" filter="url(#arch-dot-glow)">
+                            <animateMotion dur="2.5s" repeatCount="indefinite" begin="1.3s" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#arch-br3-any"/></animateMotion>
                         </circle>
                     </svg>
                 </div>

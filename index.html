@@ -130,14 +130,18 @@
                         <text x="742" y="306" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="600" font-family="'Inter',sans-serif">Any AI Agent</text>
                         <text x="742" y="325" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="10" font-family="'JetBrains Mono',monospace">ACP Compatible</text>
 
-                        <!-- App → Bridge paths (green fan) -->
+                        <!-- App → Bridge paths -->
                         <path id="arch-app-br1" d="M110,189 C215,150 265,81 320,81" fill="none" stroke="#4ade80" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.8"/>
-                        <path id="arch-app-br2" d="M110,189 C215,189 265,196 320,196" fill="none" stroke="#4ade80" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.8"/>
+                        <path id="arch-app-br2" d="M110,189 C215,189 265,196 320,196" fill="none" stroke="#fb923c" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.8"/>
                         <path id="arch-app-br3" d="M110,189 C215,230 265,311 320,311" fill="none" stroke="#4ade80" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.8"/>
 
-                        <!-- Tailscale/Local label -->
-                        <rect x="148" y="168" width="92" height="18" rx="4" fill="rgba(74,222,128,0.1)"/>
-                        <text x="194" y="181" text-anchor="middle" fill="#4ade80" font-size="9" font-weight="600" font-family="'JetBrains Mono',monospace">Tailscale/Local</text>
+                        <!-- Transport labels -->
+                        <rect x="160" y="118" width="66" height="16" rx="4" fill="rgba(74,222,128,0.1)"/>
+                        <text x="193" y="130" text-anchor="middle" fill="#4ade80" font-size="9" font-weight="600" font-family="'JetBrains Mono',monospace">Tailscale</text>
+                        <rect x="160" y="185" width="48" height="16" rx="4" fill="rgba(251,146,60,0.1)"/>
+                        <text x="184" y="197" text-anchor="middle" fill="#fb923c" font-size="9" font-weight="600" font-family="'JetBrains Mono',monospace">Local</text>
+                        <rect x="160" y="254" width="66" height="16" rx="4" fill="rgba(74,222,128,0.1)"/>
+                        <text x="193" y="266" text-anchor="middle" fill="#4ade80" font-size="9" font-weight="600" font-family="'JetBrains Mono',monospace">Tailscale</text>
 
                         <!-- Bridge → Agent paths (horizontal, blue) -->
                         <path id="arch-br1-cop" d="M485,81 H660" fill="none" stroke="rgba(96,165,250,0.65)" stroke-width="1.5" stroke-dasharray="6,4"/>
@@ -154,11 +158,11 @@
                         <circle r="3.5" fill="#4ade80" filter="url(#arch-dot-glow)">
                             <animateMotion dur="2.6s" repeatCount="indefinite" begin="1.3s"><mpath href="#arch-app-br1"/></animateMotion>
                         </circle>
-                        <!-- Animated particles: App → Bridge 2 -->
-                        <circle r="3.5" fill="#4ade80" filter="url(#arch-dot-glow)">
+                        <!-- Animated particles: App → Bridge 2 (orange/Local) -->
+                        <circle r="3.5" fill="#fb923c" filter="url(#arch-dot-glow)">
                             <animateMotion dur="2.4s" repeatCount="indefinite" begin="0.4s"><mpath href="#arch-app-br2"/></animateMotion>
                         </circle>
-                        <circle r="3.5" fill="#4ade80" filter="url(#arch-dot-glow)">
+                        <circle r="3.5" fill="#fb923c" filter="url(#arch-dot-glow)">
                             <animateMotion dur="2.4s" repeatCount="indefinite" begin="1.6s"><mpath href="#arch-app-br2"/></animateMotion>
                         </circle>
                         <!-- Animated particles: App → Bridge 3 -->

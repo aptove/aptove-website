@@ -52,20 +52,11 @@ body {
 .logo {
     display: flex;
     align-items: center;
-    gap: 0.6rem;
 }
 
 .logo-img {
-    height: 30px;
+    height: 28px;
     width: auto;
-}
-
-.logo-text {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: var(--text);
-    letter-spacing: -0.01em;
 }
 
 .nav-links {

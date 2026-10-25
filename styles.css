@@ -221,6 +221,19 @@ body {
     line-height: 1.75;
 }
 
+.hero-video-wrapper {
+    max-width: 760px;
+    margin: 0 auto 2.5rem;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-strong);
+}
+
+.hero-video-wrapper video {
+    width: 100%;
+    display: block;
+}
+
 .cta-buttons {
     display: flex;
     gap: 0.75rem;

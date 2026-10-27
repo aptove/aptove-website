@@ -282,7 +282,6 @@ body {
     max-width: 840px;
     display: block;
     margin: 0 auto;
-    min-width: 500px;
 }
 
 .arch-node-link {
@@ -612,6 +611,20 @@ footer p {
 
     .arch-diagram-wrapper {
         padding: 1rem 0.5rem;
+    }
+
+    .push-options {
+        flex-direction: column;
+    }
+
+    .push-option-divider {
+        width: 100%;
+        height: 40px;
+        writing-mode: horizontal-tb;
+        border-left: none;
+        border-right: none;
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
     }
 }
 

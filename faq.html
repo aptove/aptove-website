@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aptove FAQ - Common questions about the open source AI agent mobile app">
+    <title>FAQ - Aptove</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/logo.png" type="image/png" />
+    <link rel="stylesheet" href="styles.css?v=3">
+    <style>
+        .faq-page {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 80px 24px 100px;
+        }
+        .faq-page h1 {
+            font-family: 'DM Serif Display', Georgia, serif;
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 400;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+        }
+        .faq-page .faq-intro {
+            font-size: 1rem;
+            color: var(--text-2);
+            line-height: 1.75;
+            margin-bottom: 3rem;
+        }
+        .faq-section-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-3);
+            margin-bottom: 1rem;
+            margin-top: 3rem;
+        }
+        .faq-list {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            text-align: left;
+            padding: 1.25rem 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            line-height: 1.5;
+            transition: background-color 0.15s;
+        }
+        .faq-question:hover {
+            background-color: rgba(255,255,255,0.03);
+        }
+        .faq-question[aria-expanded="true"] {
+            background-color: rgba(255,255,255,0.04);
+        }
+        .faq-chevron {
+            flex-shrink: 0;
+            width: 16px;
+            height: 16px;
+            color: var(--text-3);
+            transition: transform 0.25s ease;
+        }
+        .faq-question[aria-expanded="true"] .faq-chevron {
+            transform: rotate(180deg);
+        }
+        .faq-answer {
+            display: none;
+            padding: 0 1.5rem 1.25rem;
+            color: var(--text-2);
+            font-size: 0.9rem;
+            line-height: 1.8;
+            border-top: 1px solid var(--border);
+        }
+        .faq-answer.open {
+            display: block;
+        }
+        .faq-answer p {
+            margin-bottom: 0.75rem;
+        }
+        .faq-answer p:last-child {
+            margin-bottom: 0;
+        }
+        .faq-answer a {
+            color: var(--text);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+        .faq-answer code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.82em;
+            background: rgba(255,255,255,0.08);
+            padding: 1px 5px;
+            border-radius: 4px;
+        }
+        .faq-answer ul {
+            margin: 0.5rem 0 0.75rem 1.25rem;
+        }
+        .faq-answer ul li {
+            margin-bottom: 0.3rem;
+        }
+        .faq-back {
+            display: inline-block;
+            font-size: 0.85rem;
+            color: var(--text-3);
+            text-decoration: none;
+            margin-bottom: 2.5rem;
+            transition: color 0.2s;
+        }
+        .faq-back:hover {
+            color: var(--text);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="/">
+                        <img src="aptove-lockup.svg" alt="Aptove" class="logo-img">
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="faq-page">
+            <a href="/" class="faq-back">&larr; Back to home</a>
+            <h1>Frequently Asked Questions</h1>
+            <p class="faq-intro">Everything you need to know about Aptove — the open source mobile client for AI agents.</p>
+
+            <div class="faq-section-label">The Basics</div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        What is Aptove?
+                        <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Aptove is an open source iOS (and Android) mobile app that lets you chat with any ACP-compatible AI agent from your phone. Think of it as a universal remote control for your AI agents — you bring the agents, Aptove brings the interface.</p>
+                        <p>It pairs with <strong>Aptove Bridge</strong>, a lightweight Rust binary that runs on your machine alongside your agent and exposes it over a secure WebSocket.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        What is ACP (Agent Client Protocol)?
+                        <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p><a href="https://agentclientprotocol.com/get-started/introduction" target="_blank">Agent Client Protocol (ACP)</a> is an open standard that defines how AI agents communicate with client applications. It decouples the agent from the interface, so any ACP-compatible client (like Aptove) can talk to any ACP-compatible agent.</p>
+                        <p>This means you are never locked in to a single vendor's app to access your agent.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Which AI agents does Aptove support?
+                        <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Any agent that supports ACP or can be wrapped with an ACP-compatible bridge. Currently this includes:</p>
+                        <ul>
+                            <li>GitHub Copilot (<code>copilot --acp</code>)</li>
+                            <li>Claude (<code>npx @agentclientprotocol/claude-agent-acp</code>)</li>
+                            <li>Google Gemini (<code>gemini --experimental-acp</code>)</li>
+                            <li>OpenAI Codex (<code>npx @agentclientprotocol/codex-acp</code>)</li>
+                            <li>Goose AI (<code>goose acp</code>)</li>
+                            <li>Any custom agent that speaks ACP over stdio</li>
+                        </ul>
+                        <p>See the <a href="https://docs.aptove.com/bridge/agent" target="_blank">agent setup docs</a> for the full list and setup guides.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-section-label">Why Aptove</div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Why should I use Aptove instead of each agent's own app?
+                        <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Most AI apps are tightly coupled to a single vendor's model. If you use Claude Code, GitHub Copilot, and a custom internal agent, you end up juggling multiple apps with different UIs, notification settings, and subscriptions.</p>
+                        <p>Aptove gives you one consistent interface for all of them. Add a new agent in seconds without installing a new app, and switch between agents in a single tap.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        How is Aptove different from Claude.ai or ChatGPT mobile apps?
+                        <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Claude.ai and ChatGPT are hosted services locked to specific models. Aptove is a <em>client</em> — it connects to any agent you choose to run, whether that's a frontier model API, a local model, or your own custom agent running on your own machine.</p>
+                        <p>Your conversations go directly between your phone and your agent via the Bridge. No third-party server sees your messages unless you explicitly configure one.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Why is Aptove better for developers and power users?
+                        <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Aptove is built for people who run their own agents — coding assistants, automation pipelines, personal AI assistants running on a home server. It lets you:</p>
+                        <ul>
+                            <li>Monitor and interact with long-running agentic tasks from your phone</li>
+                            <li>Get push notifications when your agent finishes a task</li>
+                            <li>Connect to agents over your local network or securely via Tailscale from anywhere</li>
+                            <li>Run multiple agents simultaneously and switch between them instantly</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        What features does the mobile app have?
+                        <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <ul>
+                            <li><strong>Streaming responses</strong> — agent output appears word-by-word as it arrives</li>
+                            <li><strong>Markdown &amp; code rendering</strong> — responses are rendered with syntax highlighting</li>
+                            <li><strong>Voice input</strong> — dictate messages using on-device speech recognition (iOS 16+, no subscription required, works offline)</li>
+                            <li><strong>Slash commands</strong> — type <code>/</code> to open a command picker for agent-defined commands</li>
+                            <li><strong>Multi-agent</strong> — connect to multiple bridges and switch between agents in one tap</li>
+                            <li><strong>Session continuity</strong> — close the app and resume your conversation later; the bridge preserves the agent session</li>
+                            <li><strong>Auto-reconnect</strong> — the app reconnects automatically on network changes or bridge restarts</li>
+                            <li><strong>Push notifications</strong> — get notified when your agent responds even when the app is backgrounded</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Is Aptove really free and open source?
+                        <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes. The iOS app, Android app, and Bridge are all open source on <a href="https://github.com/aptove" target="_blank">GitHub</a>. You can build and distribute your own branded version without any restrictions.</p>
+                        <p>The hosted push relay service is free during beta. A self-hosted option is available if you prefer to operate your own infrastructure — it's also open source.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-section-label">Privacy &amp; Security</div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Does Aptove store my conversations?
+                        <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No. Messages travel directly between your mobile app and your Bridge over an encrypted WebSocket. Aptove infrastructure never sees the content of your conversations.</p>
+                        <p>The push relay (if enabled) only receives a lightweight notification trigger from your Bridge — it never receives conversation content.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        How is the connection secured?
+                        <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Pairing is done via a one-time 6-digit code displayed on the Bridge (or scanned as a QR code). Once paired, the app stores credentials securely in the iOS Keychain.</p>
+                        <p>Remote connections over Tailscale are end-to-end encrypted. Local connections are scoped to your LAN. The Bridge never exposes your agent to the public internet unless you explicitly configure it to do so.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Can I self-host everything?
+                        <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, completely. The Bridge runs on your own machine. If you also want self-hosted push notifications, you can deploy your own instance of <a href="https://github.com/aptove/cf-push-relay" target="_blank">cf-push-relay</a> on Cloudflare Workers and build the mobile apps from source with your own APNs/FCM credentials.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-section-label">Setup &amp; Compatibility</div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Is the app available on Android?
+                        <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>An Android app is in development. The iOS app is the primary release today. Follow <a href="https://github.com/aptove" target="_blank">GitHub</a> or join the <a href="https://discord.gg/gD7AMxBy9y" target="_blank">Discord</a> to be notified when the Android app is available.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Do I need to be technical to set this up?
+                        <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You need to be comfortable running a terminal command to install the Bridge. After that, the Bridge has an interactive TUI that walks you through setup, and pairing is just scanning a QR code with your phone.</p>
+                        <p>Connecting the agent itself requires following the guide for your specific agent (e.g., Claude Code, Copilot). See <a href="https://docs.aptove.com" target="_blank">docs.aptove.com</a> for step-by-step instructions.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Where does the Bridge need to run?
+                        <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>On any machine where your AI agent lives — your laptop, a home server, a cloud VM, or a remote workstation. The Bridge supports macOS, Linux, and Windows.</p>
+                        <p>For local connections the Bridge and your phone just need to be on the same network. For remote access, install <a href="https://tailscale.com" target="_blank">Tailscale</a> on both the host machine and your phone.</p>
+                        <p>You can run multiple Bridge instances simultaneously — one per project folder — and each appears as a separate agent in the app.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        What are push notifications and do I need them?
+                        <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Push notifications are optional. When enabled, the Bridge sends a notification to your phone as soon as your agent produces a response — even when the app is in the background.</p>
+                        <p>This is especially useful for long-running agentic tasks: kick off a task, put your phone in your pocket, and get tapped when it's done. You can enable it with a few lines in your Bridge config or disable it entirely if you prefer.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-section-label">Still have questions?</div>
+            <p style="color:var(--text-2);font-size:0.95rem;line-height:1.75;">
+                Join the <a href="https://discord.gg/gD7AMxBy9y" target="_blank" style="color:var(--text);text-decoration:underline;text-underline-offset:3px;">Discord community</a> or open a discussion on <a href="https://github.com/orgs/aptove/discussions" target="_blank" style="color:var(--text);text-decoration:underline;text-underline-offset:3px;">GitHub</a>.
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <a href="https://github.com/aptove" target="_blank" class="footer-github" aria-label="Aptove on GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+            </a>
+            <p>&copy; 2026 Aptove. All rights reserved. &nbsp;&middot;&nbsp; <a href="/terms.html" style="color:inherit;">Terms of Service</a> &nbsp;&middot;&nbsp; <a href="/privacy.html" style="color:inherit;">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+<script>
+document.querySelectorAll('.faq-question').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+        var expanded = this.getAttribute('aria-expanded') === 'true';
+        var answer = this.nextElementSibling;
+        this.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+        answer.classList.toggle('open', !expanded);
+    });
+});
+</script>
+</body>
+</html>

@@ -292,11 +292,11 @@ body {
     filter: brightness(1.5);
 }
 
-.bridge-glow-ring {
-    animation: bridge-pulse 3s ease-in-out infinite;
+.aptove-glow-ring {
+    animation: aptove-pulse 3s ease-in-out infinite;
 }
 
-@keyframes bridge-pulse {
+@keyframes aptove-pulse {
     0%, 100% { stroke-width: 1; opacity: 0.12; }
     50%       { stroke-width: 4; opacity: 0.38; }
 }

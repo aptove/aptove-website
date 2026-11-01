@@ -161,7 +161,7 @@
                     </button>
                     <div class="faq-answer">
                         <p>Aptove is an open source iOS mobile app that lets you chat with any ACP-compatible AI agent from your phone. Think of it as a universal remote control for your AI agents: you bring the agents, Aptove brings the interface.</p>
-                        <p>It pairs with <strong>Aptove Bridge</strong>, a lightweight Rust binary that runs on your machine alongside your agent and exposes it over a secure WebSocket.</p>
+                        <p>It pairs with <strong>Aptove</strong>, a lightweight Rust binary that runs on your machine alongside your agent and exposes it over a secure WebSocket.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -189,7 +189,7 @@
                             <li>Goose AI (<code>goose acp</code>)</li>
                             <li>Any custom agent that speaks ACP over stdio</li>
                         </ul>
-                        <p>See the <a href="https://docs.aptove.com/bridge/agent" target="_blank">agent setup docs</a> for the full list and setup guides.</p>
+                        <p>See the <a href="https://docs.aptove.com/aptove/agent" target="_blank">agent setup docs</a> for the full list and setup guides.</p>
                     </div>
                 </div>
             </div>
@@ -213,7 +213,7 @@
                     </button>
                     <div class="faq-answer">
                         <p>Claude.ai and ChatGPT are hosted services locked to specific models. Aptove is a <em>client</em> that connects to any agent you choose to run, whether that's a frontier model API, a local model, or your own custom agent running on your own machine.</p>
-                        <p>Your conversations go directly between your phone and your agent via the Bridge. No third-party server sees your messages unless you explicitly configure one.</p>
+                        <p>Your conversations go directly between your phone and your agent via Aptove. No third-party server sees your messages unless you explicitly configure one.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -244,9 +244,9 @@
                             <li><strong>Markdown and code rendering:</strong> responses are rendered with syntax highlighting</li>
                             <li><strong>Voice input:</strong> dictate messages using on-device speech recognition (iOS 16+, no subscription required, works offline)</li>
                             <li><strong>Slash commands:</strong> type <code>/</code> to open a command picker for agent-defined commands</li>
-                            <li><strong>Multi-agent:</strong> connect to multiple bridges and switch between agents in one tap</li>
-                            <li><strong>Session continuity:</strong> close the app and resume your conversation later; the bridge preserves the agent session</li>
-                            <li><strong>Auto-reconnect:</strong> the app reconnects automatically on network changes or bridge restarts</li>
+                            <li><strong>Multi-agent:</strong> connect to multiple Aptove instances and switch between agents in one tap</li>
+                            <li><strong>Session continuity:</strong> close the app and resume your conversation later; Aptove preserves the agent session</li>
+                            <li><strong>Auto-reconnect:</strong> the app reconnects automatically on network changes or Aptove restarts</li>
                             <li><strong>Push notifications:</strong> get notified when your agent responds even when the app is backgrounded</li>
                         </ul>
                     </div>
@@ -281,7 +281,7 @@
                         <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </button>
                     <div class="faq-answer">
-                        <p>Pairing is done via a one-time 6-digit code displayed on the Bridge (or scanned as a QR code). Once paired, the app stores credentials securely in the iOS Keychain.</p>
+                        <p>Pairing is done via a one-time 6-digit code displayed on Aptove (or scanned as a QR code). Once paired, the app stores credentials securely in the iOS Keychain.</p>
                         <p>Remote connections over Tailscale are end-to-end encrypted. Local connections are scoped to your LAN. The Bridge never exposes your agent to the public internet unless you explicitly configure it to do so.</p>
                     </div>
                 </div>
@@ -313,19 +313,19 @@
                         <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </button>
                     <div class="faq-answer">
-                        <p>You need to be comfortable running a terminal command to install the Bridge. After that, the Bridge has an interactive TUI that walks you through setup, and pairing is just scanning a QR code with your phone.</p>
+                        <p>You need to be comfortable running a terminal command to install Aptove. After that, Aptove has an interactive TUI that walks you through setup, and pairing is just scanning a QR code with your phone.</p>
                         <p>Connecting the agent itself requires following the guide for your specific agent (e.g., Claude Code, Copilot). See <a href="https://docs.aptove.com" target="_blank">docs.aptove.com</a> for step-by-step instructions.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question" aria-expanded="false">
-                        Where does the Bridge need to run?
+                        Where does Aptove need to run?
                         <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </button>
                     <div class="faq-answer">
-                        <p>On any machine where your AI agent lives: your laptop, a home server, a cloud VM, or a remote workstation. The Bridge supports macOS, Linux, and Windows.</p>
-                        <p>For local connections the Bridge and your phone just need to be on the same network. For remote access, install <a href="https://tailscale.com" target="_blank">Tailscale</a> on both the host machine and your phone.</p>
-                        <p>You can run multiple Bridge instances simultaneously, one per project folder, and each appears as a separate agent in the app.</p>
+                        <p>On any machine where your AI agent lives: your laptop, a home server, a cloud VM, or a remote workstation. Aptove supports macOS, Linux, and Windows.</p>
+                        <p>For local connections Aptove and your phone just need to be on the same network. For remote access, install <a href="https://tailscale.com" target="_blank">Tailscale</a> on both the host machine and your phone.</p>
+                        <p>You can run multiple Aptove instances simultaneously, one per project folder, and each appears as a separate agent in the app.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -334,7 +334,7 @@
                         <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </button>
                     <div class="faq-answer">
-                        <p>Push notifications are optional. When enabled, the Bridge sends a notification to your phone as soon as your agent produces a response, even when the app is in the background.</p>
+                        <p>Push notifications are optional. When enabled, Aptove sends a notification to your phone as soon as your agent produces a response, even when the app is in the background.</p>
                         <p>This is especially useful for long-running agentic tasks: kick off a task, put your phone in your pocket, and get tapped when it's done. You can enable it with a few lines in your Bridge config or disable it entirely if you prefer.</p>
                     </div>
                 </div>

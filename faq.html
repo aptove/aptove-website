@@ -160,8 +160,8 @@
                         <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </button>
                     <div class="faq-answer">
-                        <p>Aptove is an open source iOS mobile app that lets you chat with any ACP-compatible AI agent from your phone. Think of it as a universal remote control for your AI agents: you bring the agents, Aptove brings the interface.</p>
-                        <p>It pairs with <strong>Aptove</strong>, a lightweight Rust binary that runs on your machine alongside your agent and exposes it over a secure WebSocket.</p>
+                        <p><strong>Aptove Mobile App</strong> is an open source iOS mobile app that lets you chat with any ACP-compatible AI agent from your phone. Think of it as a universal remote control for your AI agents: you bring the agents, Aptove brings the interface.</p>
+                        <p>It pairs with <strong>Aptove CLI</strong>, a lightweight Rust binary that runs on your machine alongside your agent and exposes it over a secure WebSocket.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -225,7 +225,7 @@
                         <p>Aptove is built for people who run their own agents: coding assistants, automation pipelines, personal AI assistants running on a home server. It lets you:</p>
                         <ul>
                             <li>Interact with long-running agentic tasks from your phone just by speaking to your agent</li>
-                            <li>You have the freedom to do other things while your agent works in the background and Bridge sends push notifications when tasks are complete</li>
+                            <li>You have the freedom to do other things while your agent works in the background and Aptove CLI sends push notifications when tasks are complete</li>
                             <li>Travel freely while staying connected. This works via Tailscale transport, allowing secure access to your agents from anywhere</li>
                             <li>Run multiple agents from different AI vendors simultaneously and manage them from one interface</li>
                             <li>File based configuration: Each folder in your computer can run a separate agent; allowing for organized and modular agent configurations</li>
@@ -257,7 +257,7 @@
                         <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </button>
                     <div class="faq-answer">
-                        <p>Yes. The iOS app and Bridge are all open source on <a href="https://github.com/aptove" target="_blank">GitHub</a>. You can build and use your own version without any restrictions.</p>
+                        <p>Yes. The iOS app and Aptove CLI are all open source on <a href="https://github.com/aptove" target="_blank">GitHub</a>. You can build and use your own version without any restrictions.</p>
                         <p>The hosted push relay service is free during beta. A self-hosted option is available if you prefer to operate your own infrastructure; it's also open source on <a href="https://github.com/aptove" target="_blank">GitHub</a>.</p>
                     </div>
                 </div>
@@ -271,8 +271,8 @@
                         <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </button>
                     <div class="faq-answer">
-                        <p>No. Messages travel directly between your mobile app and your Bridge over an encrypted WebSocket. Aptove infrastructure never sees the content of your conversations.</p>
-                        <p>The push relay (if enabled) only receives a lightweight notification trigger from your Bridge, never the content of your conversations.</p>
+                        <p>No. Messages travel directly between your mobile app and your Aptove CLI over an encrypted WebSocket. Aptove infrastructure never sees the content of your conversations.</p>
+                        <p>The push relay (if enabled) only receives a lightweight notification trigger from your Aptove CLI, never the content of your conversations.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -281,8 +281,8 @@
                         <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </button>
                     <div class="faq-answer">
-                        <p>Pairing is done via a one-time 6-digit code displayed on Aptove (or scanned as a QR code). Once paired, the app stores credentials securely in the iOS Keychain.</p>
-                        <p>Remote connections over Tailscale are end-to-end encrypted. Local connections are scoped to your LAN. The Bridge never exposes your agent to the public internet unless you explicitly configure it to do so.</p>
+                        <p>Pairing is done via a one-time 6-digit code displayed on Aptove CLI (or scanned as a QR code). Once paired, the app stores credentials securely in the iOS Keychain.</p>
+                        <p>Remote connections over Tailscale are end-to-end encrypted. Local connections are scoped to your LAN. The Aptove CLI never exposes your agent to the public internet unless you explicitly configure it to do so.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -291,7 +291,7 @@
                         <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </button>
                     <div class="faq-answer">
-                        <p>Yes, completely. The Bridge runs on your own machine. If you also want self-hosted push notifications, you can deploy your own instance of <a href="https://github.com/aptove/cf-push-relay" target="_blank">cf-push-relay</a> on Cloudflare Workers and build the mobile apps from source with your own APNs/FCM credentials.</p>
+                        <p>Yes, completely. The Aptove CLI runs on your own machine. If you also want self-hosted push notifications, you can deploy your own instance of <a href="https://github.com/aptove/cf-push-relay" target="_blank">cf-push-relay</a> on Cloudflare Workers and build the mobile apps from source with your own APNs/FCM credentials.</p>
                     </div>
                 </div>
             </div>
@@ -335,7 +335,7 @@
                     </button>
                     <div class="faq-answer">
                         <p>Push notifications are optional. When enabled, Aptove sends a notification to your phone as soon as your agent produces a response, even when the app is in the background.</p>
-                        <p>This is especially useful for long-running agentic tasks: kick off a task, put your phone in your pocket, and get tapped when it's done. You can enable it with a few lines in your Bridge config or disable it entirely if you prefer.</p>
+                        <p>This is especially useful for long-running agentic tasks: kick off a task, put your phone in your pocket, and get tapped when it's done. You can enable it with a few lines in your Aptove CLI config or disable it entirely if you prefer.</p>
                     </div>
                 </div>
             </div>

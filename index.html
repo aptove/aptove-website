@@ -60,9 +60,9 @@
         <section id="how-it-works" class="how-it-works">
             <div class="container">
                 <h2 class="section-title">How It Works</h2>
-                <p class="section-sub">Aptove CLI runs alongside your AI agent and exposes it over a secure WebSocket. The mobile app connects to Aptove CLI locally over Wi-Fi or remotely via Tailscale so you can chat with your agent from anywhere.</p>
+                <p class="section-sub">Aptove Router runs alongside your AI agent and exposes it over a secure WebSocket. The mobile app connects to Aptove Router locally over Wi-Fi or remotely via Tailscale so you can chat with your agent from anywhere.</p>
                 <div class="arch-diagram-wrapper">
-                    <svg viewBox="0 0 840 380" xmlns="http://www.w3.org/2000/svg" class="arch-svg" role="img" aria-label="Architecture diagram: mobile apps connecting to AI agents via Aptove CLI">
+                    <svg viewBox="0 0 840 380" xmlns="http://www.w3.org/2000/svg" class="arch-svg" role="img" aria-label="Architecture diagram: mobile apps connecting to AI agents via Aptove Router">
                         <defs>
                             <filter id="arch-node-glow" x="-30%" y="-30%" width="160%" height="160%">
                                 <feGaussianBlur stdDeviation="2" result="blur"/>
@@ -76,7 +76,7 @@
 
                         <!-- Column headers -->
                         <text x="75" y="44" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="10" font-family="'JetBrains Mono',monospace" font-weight="500" letter-spacing="1.5">APTOVE APP</text>
-                        <text x="402" y="44" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="10" font-family="'JetBrains Mono',monospace" font-weight="500" letter-spacing="1.5">APTOVE CLI</text>
+                        <text x="402" y="44" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="10" font-family="'JetBrains Mono',monospace" font-weight="500" letter-spacing="1.5">Aptove Router</text>
                         <text x="742" y="44" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="10" font-family="'JetBrains Mono',monospace" font-weight="500" letter-spacing="1.5">AI AGENTS</text>
 
                         <!-- Aptove Mobile App Node (phone shape) -->
@@ -85,7 +85,7 @@
                                 <rect x="40" y="130" width="70" height="118" rx="16" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
                             </g>
                             <text x="75" y="174" text-anchor="middle" font-size="22" font-family="system-ui,sans-serif">📱</text>
-                            <text x="75" y="197" text-anchor="middle" fill="#ffffff" font-size="9" font-weight="600" font-family="'Inter',sans-serif">Aptove CLI</text>
+                            <text x="75" y="197" text-anchor="middle" fill="#ffffff" font-size="9" font-weight="600" font-family="'Inter',sans-serif">Aptove Router</text>
                             <text x="75" y="211" text-anchor="middle" fill="#ffffff" font-size="9" font-weight="600" font-family="'Inter',sans-serif">Mobile App</text>
                         </a>
 
@@ -94,8 +94,8 @@
                             <g filter="url(#arch-node-glow)">
                                 <rect x="320" y="52" width="165" height="58" rx="10" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
                             </g>
-                            <text x="402" y="76" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="700" font-family="'Inter',sans-serif">Aptove CLI</text>
-                            <text x="402" y="95" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="10" font-family="'JetBrains Mono',monospace">aptove cli ↗</text>
+                            <text x="402" y="76" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="700" font-family="'Inter',sans-serif">Aptove Router</text>
+                            <text x="402" y="95" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="10" font-family="'JetBrains Mono',monospace">Aptove Router ↗</text>
                         </a>
 
                         <!-- Bridge 2 (paired with Codex) -->
@@ -103,8 +103,8 @@
                             <g filter="url(#arch-node-glow)">
                                 <rect x="320" y="167" width="165" height="58" rx="10" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
                             </g>
-                            <text x="402" y="191" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="700" font-family="'Inter',sans-serif">Aptove CLI</text>
-                            <text x="402" y="210" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="10" font-family="'JetBrains Mono',monospace">aptove cli ↗</text>
+                            <text x="402" y="191" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="700" font-family="'Inter',sans-serif">Aptove Router</text>
+                            <text x="402" y="210" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="10" font-family="'JetBrains Mono',monospace">Aptove Router ↗</text>
                         </a>
 
                         <!-- Bridge 3 (paired with Any Agent) -->
@@ -112,8 +112,8 @@
                             <g filter="url(#arch-node-glow)">
                                 <rect x="320" y="282" width="165" height="58" rx="10" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
                             </g>
-                            <text x="402" y="306" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="700" font-family="'Inter',sans-serif">Aptove CLI</text>
-                            <text x="402" y="325" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="10" font-family="'JetBrains Mono',monospace">aptove cli ↗</text>
+                            <text x="402" y="306" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="700" font-family="'Inter',sans-serif">Aptove Router</text>
+                            <text x="402" y="325" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="10" font-family="'JetBrains Mono',monospace">Aptove Router ↗</text>
                         </a>
 
                         <!-- GitHub Copilot Node -->
@@ -231,9 +231,9 @@
         <section class="push-section">
             <div class="container">
                 <h2 class="section-heading">Push Notifications</h2>
-                <p class="section-sub">Get notified when your agent responds even when the app is backgrounded. <br> (*) Push is an optional feature and can be disabled from Aptove CLI settings. Aptove hosted Push relay service is free during Beta while the self-hosted version will always be free.</p>
+                <p class="section-sub">Get notified when your agent responds even when the app is backgrounded. <br> (*) Push is an optional feature and can be disabled from Aptove Router settings. Aptove hosted Push relay service is free during Beta while the self-hosted version will always be free.</p>
                 <div class="arch-diagram-wrapper">
-                    <svg viewBox="0 0 840 160" xmlns="http://www.w3.org/2000/svg" class="arch-svg" role="img" aria-label="Push notification flow: Aptove CLI detects agent activity, calls push relay, which delivers to mobile via APNs or FCM">
+                    <svg viewBox="0 0 840 160" xmlns="http://www.w3.org/2000/svg" class="arch-svg" role="img" aria-label="Push notification flow: Aptove Router detects agent activity, calls push relay, which delivers to mobile via APNs or FCM">
                         <defs>
                             <filter id="push-node-glow" x="-30%" y="-30%" width="160%" height="160%">
                                 <feGaussianBlur stdDeviation="2" result="blur"/>
@@ -259,7 +259,7 @@
                             <g filter="url(#push-node-glow)">
                                 <rect x="229" y="48" width="160" height="64" rx="12" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.7)" stroke-width="2"/>
                             </g>
-                            <text x="309" y="76" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="700" font-family="'Inter',sans-serif">Aptove CLI</text>
+                            <text x="309" y="76" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="700" font-family="'Inter',sans-serif">Aptove Router</text>
                             <text x="309" y="93" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="9" font-family="'JetBrains Mono',monospace">detects activity</text>
                             <text x="309" y="104" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="9" font-family="'JetBrains Mono',monospace">calls push relay</text>
                         </a>
@@ -310,7 +310,7 @@
                 <div class="push-options">
                     <div class="push-option">
                         <div class="push-option-label">Hosted by Aptove (Beta)</div>
-                        <p>Sign in at <a href="https://dash.aptove.com" target="_blank">dash.aptove.com</a>, generate client credentials, and add the <code>[push_relay]</code> section to your Aptove CLI config. No infrastructure to manage. </p> 
+                        <p>Sign in at <a href="https://dash.aptove.com" target="_blank">dash.aptove.com</a>, generate client credentials, and add the <code>[push_relay]</code> section to your Aptove Router config. No infrastructure to manage. </p> 
                     </div>
                     <div class="push-option-divider">or</div>
                     <div class="push-option">
@@ -353,7 +353,7 @@
                         </div>
                         <div class="demo-panel-body">
                             <h3>Seamlessly connects any ACP AI agent to your mobile device.</h3>
-                            <p>Aptove CLI runs on your machine. Very easy to set up and use.</p>
+                            <p>Aptove Router runs on your machine. Very easy to set up and use.</p>
                             <div class="demo-tags">
                                 <span class="demo-tag">WebSocket</span>
                                 <span class="demo-tag">ACP</span>
@@ -390,7 +390,7 @@
         <!-- Install -->
         <section class="install-section">
             <div class="container">
-                <h2 class="section-title">Install Aptove CLI</h2>
+                <h2 class="section-title">Install Aptove Router</h2>
                 <p class="section-sub">Run Aptove on any machine where your AI agent lives.</p>
                 <div class="install-blocks">
                     <div class="install-block">
